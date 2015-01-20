@@ -1,0 +1,1069 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0908F3211A69BA3500E2AF35 /* AVColoredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0908F3201A69BA3500E2AF35 /* AVColoredViewController.m */; };
+		0908F32F1A6D6B2600E2AF35 /* AVUserNetworkUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 0908F32E1A6D6B2600E2AF35 /* AVUserNetworkUtility.m */; };
+		0908F3321A6D6B4A00E2AF35 /* AVCouponNetworkUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 0908F3311A6D6B4A00E2AF35 /* AVCouponNetworkUtility.m */; };
+		0908F3381A6D7A6A00E2AF35 /* AVTokenRefreshHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0908F3371A6D7A6A00E2AF35 /* AVTokenRefreshHTTPRequestOperationManager.m */; };
+		0908F33B1A6D8C6100E2AF35 /* AVUserManager+AutoLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0908F33A1A6D8C6100E2AF35 /* AVUserManager+AutoLogin.m */; };
+		0908F33E1A6DD69F00E2AF35 /* AVPushRegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = 0908F33D1A6DD69F00E2AF35 /* AVPushRegistration.m */; };
+		09114FCB1A42212000E81A32 /* AVCouponEditViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09114FCA1A42212000E81A32 /* AVCouponEditViewModel.m */; };
+		09114FCE1A42216400E81A32 /* AVCouponEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09114FCD1A42216400E81A32 /* AVCouponEditView.m */; };
+		09114FD61A43A15900E81A32 /* AVCounterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09114FD51A43A15900E81A32 /* AVCounterViewController.xib */; };
+		09114FD91A43A17D00E81A32 /* AVCounterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09114FD81A43A17D00E81A32 /* AVCounterView.m */; };
+		09114FEA1A449D2F00E81A32 /* AVCounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09114FE91A449D2F00E81A32 /* AVCounterViewController.m */; };
+		09114FF51A44B12E00E81A32 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09114FF41A44B12E00E81A32 /* Settings.storyboard */; };
+		09114FF81A44B14400E81A32 /* AVSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09114FF71A44B14400E81A32 /* AVSettingsViewController.m */; };
+		09114FFB1A44B16800E81A32 /* AVSettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09114FFA1A44B16800E81A32 /* AVSettingsView.m */; };
+		091150011A44B3EC00E81A32 /* AVModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 091150001A44B3EC00E81A32 /* AVModalViewController.m */; };
+		091150051A44BE4600E81A32 /* AVModalUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 091150041A44BE4600E81A32 /* AVModalUtility.m */; };
+		0918E9541A41E281008A9FC4 /* AVCouponEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0918E9531A41E281008A9FC4 /* AVCouponEditViewController.m */; };
+		091EB19B1A38F03900335EE6 /* AVHeartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 091EB19A1A38F03900335EE6 /* AVHeartView.xib */; };
+		093555291A39F61800D04716 /* AVHeartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 093555281A39F61800D04716 /* AVHeartView.m */; };
+		0935555E1A3A0EFE00D04716 /* AVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935555D1A3A0EFE00D04716 /* AVAppDelegate.m */; };
+		093555641A3A0FF400D04716 /* AVCouponTableContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 093555631A3A0FF400D04716 /* AVCouponTableContainerViewController.m */; };
+		093555671A3A101C00D04716 /* AVCouponEditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 093555661A3A101C00D04716 /* AVCouponEditTableViewController.m */; };
+		0935556A1A3A103600D04716 /* AVCouponEditTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 093555691A3A103600D04716 /* AVCouponEditTableViewCell.m */; };
+		0935556D1A3A104F00D04716 /* AVCouponTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935556C1A3A104F00D04716 /* AVCouponTableViewController.m */; };
+		093555731A3A13AF00D04716 /* AVCouponTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 093555721A3A13AF00D04716 /* AVCouponTableViewCell.m */; };
+		093555761A3A158300D04716 /* AVCountdownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 093555751A3A158300D04716 /* AVCountdownViewController.m */; };
+		093555791A3A18FF00D04716 /* AVMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 093555781A3A18FF00D04716 /* AVMenuViewController.m */; };
+		0935557C1A3A1D0300D04716 /* AVViewControllerUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935557B1A3A1D0300D04716 /* AVViewControllerUtility.m */; };
+		0935557F1A3A1E8300D04716 /* AVStringUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935557E1A3A1E8300D04716 /* AVStringUtility.m */; };
+		093555821A3A1EC600D04716 /* AVTransitionUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 093555811A3A1EC600D04716 /* AVTransitionUtility.m */; };
+		093555971A3A24B400D04716 /* AVLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 093555961A3A24B400D04716 /* AVLoginViewModel.m */; };
+		0935559A1A3A24D600D04716 /* AVLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 093555991A3A24D600D04716 /* AVLoginView.m */; };
+		0935559D1A3A275200D04716 /* AVBaseLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935559C1A3A275200D04716 /* AVBaseLoginViewController.m */; };
+		093555A01A3A2A6A00D04716 /* AVBaseLoginTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935559F1A3A2A6A00D04716 /* AVBaseLoginTabController.m */; };
+		093555A31A3A2DE000D04716 /* AVLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 093555A21A3A2DE000D04716 /* AVLoginViewController.m */; };
+		093555A61A3A2F5600D04716 /* AVRegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 093555A51A3A2F5600D04716 /* AVRegistrationViewController.m */; };
+		093555A91A3A2FA000D04716 /* AVLoginToMenuTransitionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 093555A81A3A2FA000D04716 /* AVLoginToMenuTransitionManager.m */; };
+		093555AB1A3A34D200D04716 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 093555AA1A3A34D200D04716 /* main.m */; };
+		093555B41A3A4C0700D04716 /* AVRegistrationViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 093555B31A3A4C0700D04716 /* AVRegistrationViewModel.m */; };
+		093555B71A3A4C4800D04716 /* AVRegistrationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 093555B61A3A4C4800D04716 /* AVRegistrationView.m */; };
+		093555BA1A3A4E1F00D04716 /* AVTextFieldAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 093555B91A3A4E1F00D04716 /* AVTextFieldAdapter.m */; };
+		093555BF1A3A50E700D04716 /* AVConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 093555BE1A3A50E700D04716 /* AVConstants.m */; };
+		093555CA1A3B4DBA00D04716 /* AVCoupon.m in Sources */ = {isa = PBXBuildFile; fileRef = 093555C91A3B4DBA00D04716 /* AVCoupon.m */; };
+		093555D21A3B506F00D04716 /* AVUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 093555D11A3B506F00D04716 /* AVUser.m */; };
+		093555D71A3F5D8700D04716 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 093555D61A3F5D8700D04716 /* Icons.xcassets */; };
+		093C20901A14750D00C62937 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093C208F1A14750D00C62937 /* AudioToolbox.framework */; };
+		093C20921A14751200C62937 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093C20911A14751200C62937 /* CFNetwork.framework */; };
+		093C20941A14751600C62937 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093C20931A14751600C62937 /* CoreGraphics.framework */; };
+		093C20961A14751A00C62937 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093C20951A14751A00C62937 /* CoreLocation.framework */; };
+		093C20981A14751F00C62937 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 093C20971A14751F00C62937 /* libz.dylib */; };
+		093C209A1A14752400C62937 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093C20991A14752400C62937 /* MobileCoreServices.framework */; };
+		093C209C1A14752800C62937 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093C209B1A14752800C62937 /* QuartzCore.framework */; };
+		093C209E1A14752B00C62937 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093C209D1A14752B00C62937 /* Security.framework */; };
+		093C20A21A14753300C62937 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093C20A11A14753300C62937 /* SystemConfiguration.framework */; };
+		093C20A41A14759000C62937 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093C20A31A14759000C62937 /* Foundation.framework */; };
+		0945C8E21A45E35E004379E2 /* AVModalContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0945C8E11A45E35E004379E2 /* AVModalContainerViewController.xib */; };
+		0945C8E51A45E3D2004379E2 /* AVModalContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0945C8E41A45E3D2004379E2 /* AVModalContainerViewController.m */; };
+		0945C8E71A48F3FA004379E2 /* AVCountdownViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0945C8E61A48F3FA004379E2 /* AVCountdownViewController.xib */; };
+		0945C8EB1A48FBEC004379E2 /* AVEnterCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0945C8E91A48FBEC004379E2 /* AVEnterCodeViewController.m */; };
+		0945C8EC1A48FBEC004379E2 /* AVEnterCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0945C8EA1A48FBEC004379E2 /* AVEnterCodeViewController.xib */; };
+		0945C8F01A48FC41004379E2 /* AVEnterCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0945C8EF1A48FC41004379E2 /* AVEnterCodeView.m */; };
+		0945C8F31A48FE03004379E2 /* AVEnterCodeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0945C8F21A48FE03004379E2 /* AVEnterCodeViewModel.m */; };
+		097EC24D1A2E77EC0060D6AF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 097EC24C1A2E77EC0060D6AF /* Login.storyboard */; };
+		098683CB1A65E097004A4D60 /* AVLinkConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 098683CA1A65E097004A4D60 /* AVLinkConnector.m */; };
+		098683CE1A6721AB004A4D60 /* AVLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 098683CD1A6721AB004A4D60 /* AVLink.m */; };
+		098770711A69784A006948D8 /* AVColorUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 098770701A69784A006948D8 /* AVColorUtility.m */; };
+		098CA1241A65A07C00E0F364 /* AVScrollViewKeyboardAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 098CA1231A65A07C00E0F364 /* AVScrollViewKeyboardAdapter.m */; };
+		0999DBED1A1D040700AA0C8F /* Coupons.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0999DBEC1A1D040700AA0C8F /* Coupons.storyboard */; };
+		09A7FE881A3FE14B00255C76 /* AVCouponBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A7FE871A3FE14B00255C76 /* AVCouponBaseTableViewController.m */; };
+		09A7FEA11A40CBBC00255C76 /* AVArrayTableViewAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A7FEA01A40CBBC00255C76 /* AVArrayTableViewAdapter.m */; };
+		09C4191C1A144C2400EF62DF /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09C4191A1A144C2400EF62DF /* Menu.storyboard */; };
+		09C4191E1A144C2400EF62DF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09C4191D1A144C2400EF62DF /* Images.xcassets */; };
+		09C419211A144C2400EF62DF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09C4191F1A144C2400EF62DF /* LaunchScreen.xib */; };
+		09E885761A646058004F3617 /* AVBaseNetworkUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E885751A646058004F3617 /* AVBaseNetworkUtility.m */; };
+		09E885791A6464F5004F3617 /* AVUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E885781A6464F5004F3617 /* AVUserManager.m */; };
+		09E8857C1A646DB3004F3617 /* AVToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E8857B1A646DB3004F3617 /* AVToken.m */; };
+		7C885736E41F67AE0F823D70 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F494067B65F4E114C6268EDF /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0908F31F1A69BA3500E2AF35 /* AVColoredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVColoredViewController.h; sourceTree = "<group>"; };
+		0908F3201A69BA3500E2AF35 /* AVColoredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVColoredViewController.m; sourceTree = "<group>"; };
+		0908F32D1A6D6B2600E2AF35 /* AVUserNetworkUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVUserNetworkUtility.h; sourceTree = "<group>"; };
+		0908F32E1A6D6B2600E2AF35 /* AVUserNetworkUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVUserNetworkUtility.m; sourceTree = "<group>"; };
+		0908F3301A6D6B4A00E2AF35 /* AVCouponNetworkUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCouponNetworkUtility.h; sourceTree = "<group>"; };
+		0908F3311A6D6B4A00E2AF35 /* AVCouponNetworkUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCouponNetworkUtility.m; sourceTree = "<group>"; };
+		0908F3361A6D7A6A00E2AF35 /* AVTokenRefreshHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTokenRefreshHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		0908F3371A6D7A6A00E2AF35 /* AVTokenRefreshHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTokenRefreshHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		0908F3391A6D8C6100E2AF35 /* AVUserManager+AutoLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVUserManager+AutoLogin.h"; sourceTree = "<group>"; };
+		0908F33A1A6D8C6100E2AF35 /* AVUserManager+AutoLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVUserManager+AutoLogin.m"; sourceTree = "<group>"; };
+		0908F33C1A6DD69F00E2AF35 /* AVPushRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPushRegistration.h; sourceTree = "<group>"; };
+		0908F33D1A6DD69F00E2AF35 /* AVPushRegistration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPushRegistration.m; sourceTree = "<group>"; };
+		09114FC91A42212000E81A32 /* AVCouponEditViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AVCouponEditViewModel.h; path = Anniversary/AVCouponEditViewModel.h; sourceTree = SOURCE_ROOT; };
+		09114FCA1A42212000E81A32 /* AVCouponEditViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AVCouponEditViewModel.m; path = Anniversary/AVCouponEditViewModel.m; sourceTree = SOURCE_ROOT; };
+		09114FCC1A42216400E81A32 /* AVCouponEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AVCouponEditView.h; path = Anniversary/AVCouponEditView.h; sourceTree = SOURCE_ROOT; };
+		09114FCD1A42216400E81A32 /* AVCouponEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AVCouponEditView.m; path = Anniversary/AVCouponEditView.m; sourceTree = SOURCE_ROOT; };
+		09114FD51A43A15900E81A32 /* AVCounterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVCounterViewController.xib; sourceTree = "<group>"; };
+		09114FD71A43A17D00E81A32 /* AVCounterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCounterView.h; sourceTree = "<group>"; };
+		09114FD81A43A17D00E81A32 /* AVCounterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCounterView.m; sourceTree = "<group>"; };
+		09114FE81A449D2F00E81A32 /* AVCounterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCounterViewController.h; sourceTree = "<group>"; };
+		09114FE91A449D2F00E81A32 /* AVCounterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCounterViewController.m; sourceTree = "<group>"; };
+		09114FF41A44B12E00E81A32 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		09114FF61A44B14400E81A32 /* AVSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSettingsViewController.h; sourceTree = "<group>"; };
+		09114FF71A44B14400E81A32 /* AVSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVSettingsViewController.m; sourceTree = "<group>"; };
+		09114FF91A44B16800E81A32 /* AVSettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSettingsView.h; sourceTree = "<group>"; };
+		09114FFA1A44B16800E81A32 /* AVSettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVSettingsView.m; sourceTree = "<group>"; };
+		09114FFF1A44B3EC00E81A32 /* AVModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVModalViewController.h; sourceTree = "<group>"; };
+		091150001A44B3EC00E81A32 /* AVModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVModalViewController.m; sourceTree = "<group>"; };
+		091150031A44BE4600E81A32 /* AVModalUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVModalUtility.h; sourceTree = "<group>"; };
+		091150041A44BE4600E81A32 /* AVModalUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVModalUtility.m; sourceTree = "<group>"; };
+		0918E9521A41E281008A9FC4 /* AVCouponEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AVCouponEditViewController.h; path = Anniversary/AVCouponEditViewController.h; sourceTree = SOURCE_ROOT; };
+		0918E9531A41E281008A9FC4 /* AVCouponEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AVCouponEditViewController.m; path = Anniversary/AVCouponEditViewController.m; sourceTree = SOURCE_ROOT; };
+		091EB19A1A38F03900335EE6 /* AVHeartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVHeartView.xib; sourceTree = "<group>"; };
+		093555271A39F61800D04716 /* AVHeartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHeartView.h; sourceTree = "<group>"; };
+		093555281A39F61800D04716 /* AVHeartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHeartView.m; sourceTree = "<group>"; };
+		0935555C1A3A0EFE00D04716 /* AVAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAppDelegate.h; sourceTree = "<group>"; };
+		0935555D1A3A0EFE00D04716 /* AVAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAppDelegate.m; sourceTree = "<group>"; };
+		093555621A3A0FF400D04716 /* AVCouponTableContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AVCouponTableContainerViewController.h; path = Anniversary/AVCouponTableContainerViewController.h; sourceTree = SOURCE_ROOT; };
+		093555631A3A0FF400D04716 /* AVCouponTableContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AVCouponTableContainerViewController.m; path = Anniversary/AVCouponTableContainerViewController.m; sourceTree = SOURCE_ROOT; };
+		093555651A3A101C00D04716 /* AVCouponEditTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AVCouponEditTableViewController.h; path = Anniversary/AVCouponEditTableViewController.h; sourceTree = SOURCE_ROOT; };
+		093555661A3A101C00D04716 /* AVCouponEditTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AVCouponEditTableViewController.m; path = Anniversary/AVCouponEditTableViewController.m; sourceTree = SOURCE_ROOT; };
+		093555681A3A103600D04716 /* AVCouponEditTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AVCouponEditTableViewCell.h; path = Anniversary/AVCouponEditTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		093555691A3A103600D04716 /* AVCouponEditTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AVCouponEditTableViewCell.m; path = Anniversary/AVCouponEditTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		0935556B1A3A104F00D04716 /* AVCouponTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AVCouponTableViewController.h; path = Anniversary/AVCouponTableViewController.h; sourceTree = SOURCE_ROOT; };
+		0935556C1A3A104F00D04716 /* AVCouponTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AVCouponTableViewController.m; path = Anniversary/AVCouponTableViewController.m; sourceTree = SOURCE_ROOT; };
+		093555711A3A13AF00D04716 /* AVCouponTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AVCouponTableViewCell.h; path = Anniversary/AVCouponTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		093555721A3A13AF00D04716 /* AVCouponTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AVCouponTableViewCell.m; path = Anniversary/AVCouponTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		093555741A3A158300D04716 /* AVCountdownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCountdownViewController.h; sourceTree = "<group>"; };
+		093555751A3A158300D04716 /* AVCountdownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCountdownViewController.m; sourceTree = "<group>"; };
+		093555771A3A18FF00D04716 /* AVMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AVMenuViewController.h; path = Anniversary/AVMenuViewController.h; sourceTree = SOURCE_ROOT; };
+		093555781A3A18FF00D04716 /* AVMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AVMenuViewController.m; path = Anniversary/AVMenuViewController.m; sourceTree = SOURCE_ROOT; };
+		0935557A1A3A1D0300D04716 /* AVViewControllerUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVViewControllerUtility.h; sourceTree = "<group>"; };
+		0935557B1A3A1D0300D04716 /* AVViewControllerUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVViewControllerUtility.m; sourceTree = "<group>"; };
+		0935557D1A3A1E8300D04716 /* AVStringUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVStringUtility.h; sourceTree = "<group>"; };
+		0935557E1A3A1E8300D04716 /* AVStringUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVStringUtility.m; sourceTree = "<group>"; };
+		093555801A3A1EC600D04716 /* AVTransitionUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTransitionUtility.h; sourceTree = "<group>"; };
+		093555811A3A1EC600D04716 /* AVTransitionUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTransitionUtility.m; sourceTree = "<group>"; };
+		093555951A3A24B400D04716 /* AVLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVLoginViewModel.h; sourceTree = "<group>"; };
+		093555961A3A24B400D04716 /* AVLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVLoginViewModel.m; sourceTree = "<group>"; };
+		093555981A3A24D600D04716 /* AVLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVLoginView.h; sourceTree = "<group>"; };
+		093555991A3A24D600D04716 /* AVLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVLoginView.m; sourceTree = "<group>"; };
+		0935559B1A3A275200D04716 /* AVBaseLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVBaseLoginViewController.h; sourceTree = "<group>"; };
+		0935559C1A3A275200D04716 /* AVBaseLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVBaseLoginViewController.m; sourceTree = "<group>"; };
+		0935559E1A3A2A6A00D04716 /* AVBaseLoginTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVBaseLoginTabController.h; sourceTree = "<group>"; };
+		0935559F1A3A2A6A00D04716 /* AVBaseLoginTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVBaseLoginTabController.m; sourceTree = "<group>"; };
+		093555A11A3A2DE000D04716 /* AVLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVLoginViewController.h; sourceTree = "<group>"; };
+		093555A21A3A2DE000D04716 /* AVLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVLoginViewController.m; sourceTree = "<group>"; };
+		093555A41A3A2F5600D04716 /* AVRegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVRegistrationViewController.h; sourceTree = "<group>"; };
+		093555A51A3A2F5600D04716 /* AVRegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVRegistrationViewController.m; sourceTree = "<group>"; };
+		093555A71A3A2FA000D04716 /* AVLoginToMenuTransitionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVLoginToMenuTransitionManager.h; sourceTree = "<group>"; };
+		093555A81A3A2FA000D04716 /* AVLoginToMenuTransitionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVLoginToMenuTransitionManager.m; sourceTree = "<group>"; };
+		093555AA1A3A34D200D04716 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		093555B21A3A4C0700D04716 /* AVRegistrationViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVRegistrationViewModel.h; sourceTree = "<group>"; };
+		093555B31A3A4C0700D04716 /* AVRegistrationViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVRegistrationViewModel.m; sourceTree = "<group>"; };
+		093555B51A3A4C4800D04716 /* AVRegistrationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVRegistrationView.h; sourceTree = "<group>"; };
+		093555B61A3A4C4800D04716 /* AVRegistrationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVRegistrationView.m; sourceTree = "<group>"; };
+		093555B81A3A4E1F00D04716 /* AVTextFieldAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVTextFieldAdapter.h; sourceTree = "<group>"; };
+		093555B91A3A4E1F00D04716 /* AVTextFieldAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVTextFieldAdapter.m; sourceTree = "<group>"; };
+		093555BD1A3A50E700D04716 /* AVConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVConstants.h; sourceTree = "<group>"; };
+		093555BE1A3A50E700D04716 /* AVConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVConstants.m; sourceTree = "<group>"; };
+		093555C81A3B4DBA00D04716 /* AVCoupon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AVCoupon.h; path = Anniversary/AVCoupon.h; sourceTree = SOURCE_ROOT; };
+		093555C91A3B4DBA00D04716 /* AVCoupon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AVCoupon.m; path = Anniversary/AVCoupon.m; sourceTree = SOURCE_ROOT; };
+		093555D01A3B506F00D04716 /* AVUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVUser.h; sourceTree = "<group>"; };
+		093555D11A3B506F00D04716 /* AVUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVUser.m; sourceTree = "<group>"; };
+		093555D61A3F5D8700D04716 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		093C208F1A14750D00C62937 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		093C20911A14751200C62937 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		093C20931A14751600C62937 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		093C20951A14751A00C62937 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		093C20971A14751F00C62937 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		093C20991A14752400C62937 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		093C209B1A14752800C62937 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		093C209D1A14752B00C62937 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		093C20A11A14753300C62937 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		093C20A31A14759000C62937 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0945C8E11A45E35E004379E2 /* AVModalContainerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVModalContainerViewController.xib; sourceTree = "<group>"; };
+		0945C8E31A45E3D2004379E2 /* AVModalContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVModalContainerViewController.h; sourceTree = "<group>"; };
+		0945C8E41A45E3D2004379E2 /* AVModalContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVModalContainerViewController.m; sourceTree = "<group>"; };
+		0945C8E61A48F3FA004379E2 /* AVCountdownViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVCountdownViewController.xib; sourceTree = "<group>"; };
+		0945C8E81A48FBEC004379E2 /* AVEnterCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVEnterCodeViewController.h; sourceTree = "<group>"; };
+		0945C8E91A48FBEC004379E2 /* AVEnterCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVEnterCodeViewController.m; sourceTree = "<group>"; };
+		0945C8EA1A48FBEC004379E2 /* AVEnterCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVEnterCodeViewController.xib; sourceTree = "<group>"; };
+		0945C8EE1A48FC41004379E2 /* AVEnterCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVEnterCodeView.h; sourceTree = "<group>"; };
+		0945C8EF1A48FC41004379E2 /* AVEnterCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVEnterCodeView.m; sourceTree = "<group>"; };
+		0945C8F11A48FE03004379E2 /* AVEnterCodeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVEnterCodeViewModel.h; sourceTree = "<group>"; };
+		0945C8F21A48FE03004379E2 /* AVEnterCodeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVEnterCodeViewModel.m; sourceTree = "<group>"; };
+		097EC24C1A2E77EC0060D6AF /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		098683C91A65E097004A4D60 /* AVLinkConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVLinkConnector.h; sourceTree = "<group>"; };
+		098683CA1A65E097004A4D60 /* AVLinkConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVLinkConnector.m; sourceTree = "<group>"; };
+		098683CC1A6721AB004A4D60 /* AVLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVLink.h; sourceTree = "<group>"; };
+		098683CD1A6721AB004A4D60 /* AVLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVLink.m; sourceTree = "<group>"; };
+		0987706F1A69784A006948D8 /* AVColorUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVColorUtility.h; sourceTree = "<group>"; };
+		098770701A69784A006948D8 /* AVColorUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVColorUtility.m; sourceTree = "<group>"; };
+		098CA1221A65A07C00E0F364 /* AVScrollViewKeyboardAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVScrollViewKeyboardAdapter.h; sourceTree = "<group>"; };
+		098CA1231A65A07C00E0F364 /* AVScrollViewKeyboardAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVScrollViewKeyboardAdapter.m; sourceTree = "<group>"; };
+		0999DBEC1A1D040700AA0C8F /* Coupons.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Coupons.storyboard; path = /Users/abouzek/Documents/workspace/lq_ios/Anniversary/Coupons.storyboard; sourceTree = "<absolute>"; };
+		09A7FE861A3FE14B00255C76 /* AVCouponBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AVCouponBaseTableViewController.h; path = Anniversary/AVCouponBaseTableViewController.h; sourceTree = SOURCE_ROOT; };
+		09A7FE871A3FE14B00255C76 /* AVCouponBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AVCouponBaseTableViewController.m; path = Anniversary/AVCouponBaseTableViewController.m; sourceTree = SOURCE_ROOT; };
+		09A7FE9F1A40CBBC00255C76 /* AVArrayTableViewAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVArrayTableViewAdapter.h; sourceTree = "<group>"; };
+		09A7FEA01A40CBBC00255C76 /* AVArrayTableViewAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVArrayTableViewAdapter.m; sourceTree = "<group>"; };
+		09C419111A144C2400EF62DF /* Anniversary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anniversary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		09C419151A144C2400EF62DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09C4191B1A144C2400EF62DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Menu.storyboard; sourceTree = "<group>"; };
+		09C4191D1A144C2400EF62DF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		09C419201A144C2400EF62DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		09C4192B1A144C2400EF62DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09C4192C1A144C2400EF62DF /* AnniversaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnniversaryTests.swift; sourceTree = "<group>"; };
+		09E885741A646058004F3617 /* AVBaseNetworkUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVBaseNetworkUtility.h; sourceTree = "<group>"; };
+		09E885751A646058004F3617 /* AVBaseNetworkUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVBaseNetworkUtility.m; sourceTree = "<group>"; };
+		09E885771A6464F5004F3617 /* AVUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVUserManager.h; sourceTree = "<group>"; };
+		09E885781A6464F5004F3617 /* AVUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVUserManager.m; sourceTree = "<group>"; };
+		09E8857A1A646DB3004F3617 /* AVToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVToken.h; sourceTree = "<group>"; };
+		09E8857B1A646DB3004F3617 /* AVToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVToken.m; sourceTree = "<group>"; };
+		487F5B45C6814BAC1A8C161A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8A0C3E9FA8484EBD308AE431 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F494067B65F4E114C6268EDF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09C4190E1A144C2400EF62DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				093C20A41A14759000C62937 /* Foundation.framework in Frameworks */,
+				093C20A21A14753300C62937 /* SystemConfiguration.framework in Frameworks */,
+				093C209E1A14752B00C62937 /* Security.framework in Frameworks */,
+				093C209C1A14752800C62937 /* QuartzCore.framework in Frameworks */,
+				093C209A1A14752400C62937 /* MobileCoreServices.framework in Frameworks */,
+				093C20981A14751F00C62937 /* libz.dylib in Frameworks */,
+				093C20961A14751A00C62937 /* CoreLocation.framework in Frameworks */,
+				093C20941A14751600C62937 /* CoreGraphics.framework in Frameworks */,
+				093C20921A14751200C62937 /* CFNetwork.framework in Frameworks */,
+				093C20901A14750D00C62937 /* AudioToolbox.framework in Frameworks */,
+				7C885736E41F67AE0F823D70 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0908F31E1A69BA2200E2AF35 /* Base Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0908F31F1A69BA3500E2AF35 /* AVColoredViewController.h */,
+				0908F3201A69BA3500E2AF35 /* AVColoredViewController.m */,
+			);
+			name = "Base Classes";
+			sourceTree = "<group>";
+		};
+		0908F3231A6D60DA00E2AF35 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				09E885741A646058004F3617 /* AVBaseNetworkUtility.h */,
+				09E885751A646058004F3617 /* AVBaseNetworkUtility.m */,
+				0908F3301A6D6B4A00E2AF35 /* AVCouponNetworkUtility.h */,
+				0908F3311A6D6B4A00E2AF35 /* AVCouponNetworkUtility.m */,
+				0908F3361A6D7A6A00E2AF35 /* AVTokenRefreshHTTPRequestOperationManager.h */,
+				0908F3371A6D7A6A00E2AF35 /* AVTokenRefreshHTTPRequestOperationManager.m */,
+				0908F32D1A6D6B2600E2AF35 /* AVUserNetworkUtility.h */,
+				0908F32E1A6D6B2600E2AF35 /* AVUserNetworkUtility.m */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		090DDFEE1A1494000002BE89 /* Countdown */ = {
+			isa = PBXGroup;
+			children = (
+				093555741A3A158300D04716 /* AVCountdownViewController.h */,
+				093555751A3A158300D04716 /* AVCountdownViewController.m */,
+				0945C8E61A48F3FA004379E2 /* AVCountdownViewController.xib */,
+			);
+			name = Countdown;
+			sourceTree = "<group>";
+		};
+		090DDFEF1A1494120002BE89 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				093555D61A3F5D8700D04716 /* Icons.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		090DDFF01A1494230002BE89 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				09C4191F1A144C2400EF62DF /* LaunchScreen.xib */,
+				09C4191A1A144C2400EF62DF /* Menu.storyboard */,
+				093555771A3A18FF00D04716 /* AVMenuViewController.h */,
+				093555781A3A18FF00D04716 /* AVMenuViewController.m */,
+			);
+			name = Menu;
+			path = AnniversaryTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		090DDFF11A1494260002BE89 /* Coupons */ = {
+			isa = PBXGroup;
+			children = (
+				09A7FE891A3FE1C500255C76 /* Coupon Base Table View */,
+				0999DBDC1A1CFFE100AA0C8F /* Coupon Add View */,
+				0999DBDF1A1D00B600AA0C8F /* Coupon Table Container View */,
+				0999DBD81A1CFF0E00AA0C8F /* Coupon Table Edit View */,
+				0999DBD91A1CFF1800AA0C8F /* Coupon Table View */,
+				0999DBEC1A1D040700AA0C8F /* Coupons.storyboard */,
+				093555C81A3B4DBA00D04716 /* AVCoupon.h */,
+				093555C91A3B4DBA00D04716 /* AVCoupon.m */,
+			);
+			name = Coupons;
+			path = AnniversaryTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		09114FD31A43A0E900E81A32 /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				09A7FE9F1A40CBBC00255C76 /* AVArrayTableViewAdapter.h */,
+				09A7FEA01A40CBBC00255C76 /* AVArrayTableViewAdapter.m */,
+				098CA1221A65A07C00E0F364 /* AVScrollViewKeyboardAdapter.h */,
+				098CA1231A65A07C00E0F364 /* AVScrollViewKeyboardAdapter.m */,
+				093555B81A3A4E1F00D04716 /* AVTextFieldAdapter.h */,
+				093555B91A3A4E1F00D04716 /* AVTextFieldAdapter.m */,
+			);
+			name = Adapters;
+			sourceTree = "<group>";
+		};
+		09114FD41A43A0F400E81A32 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				09114FD51A43A15900E81A32 /* AVCounterViewController.xib */,
+				09114FD71A43A17D00E81A32 /* AVCounterView.h */,
+				09114FD81A43A17D00E81A32 /* AVCounterView.m */,
+				09114FE81A449D2F00E81A32 /* AVCounterViewController.h */,
+				09114FE91A449D2F00E81A32 /* AVCounterViewController.m */,
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
+		09114FF31A44B0EE00E81A32 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				09114FF41A44B12E00E81A32 /* Settings.storyboard */,
+				09114FF61A44B14400E81A32 /* AVSettingsViewController.h */,
+				09114FF71A44B14400E81A32 /* AVSettingsViewController.m */,
+				09114FF91A44B16800E81A32 /* AVSettingsView.h */,
+				09114FFA1A44B16800E81A32 /* AVSettingsView.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		091EB1921A38D18C00335EE6 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				091EB1931A38D1A000335EE6 /* Login to Menu */,
+			);
+			name = Transitions;
+			sourceTree = "<group>";
+		};
+		091EB1931A38D1A000335EE6 /* Login to Menu */ = {
+			isa = PBXGroup;
+			children = (
+				093555A71A3A2FA000D04716 /* AVLoginToMenuTransitionManager.h */,
+				093555A81A3A2FA000D04716 /* AVLoginToMenuTransitionManager.m */,
+			);
+			name = "Login to Menu";
+			sourceTree = "<group>";
+		};
+		091EB1981A38F01700335EE6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				091EB1991A38F02400335EE6 /* Heart View */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		091EB1991A38F02400335EE6 /* Heart View */ = {
+			isa = PBXGroup;
+			children = (
+				091EB19A1A38F03900335EE6 /* AVHeartView.xib */,
+				093555271A39F61800D04716 /* AVHeartView.h */,
+				093555281A39F61800D04716 /* AVHeartView.m */,
+			);
+			name = "Heart View";
+			sourceTree = "<group>";
+		};
+		093555AF1A3A4BC400D04716 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				093555A41A3A2F5600D04716 /* AVRegistrationViewController.h */,
+				093555A51A3A2F5600D04716 /* AVRegistrationViewController.m */,
+				093555B21A3A4C0700D04716 /* AVRegistrationViewModel.h */,
+				093555B31A3A4C0700D04716 /* AVRegistrationViewModel.m */,
+				093555B51A3A4C4800D04716 /* AVRegistrationView.h */,
+				093555B61A3A4C4800D04716 /* AVRegistrationView.m */,
+			);
+			name = Registration;
+			sourceTree = "<group>";
+		};
+		093555B01A3A4BCA00D04716 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0935559B1A3A275200D04716 /* AVBaseLoginViewController.h */,
+				0935559C1A3A275200D04716 /* AVBaseLoginViewController.m */,
+				0935559E1A3A2A6A00D04716 /* AVBaseLoginTabController.h */,
+				0935559F1A3A2A6A00D04716 /* AVBaseLoginTabController.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		093555B11A3A4BCD00D04716 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				093555A11A3A2DE000D04716 /* AVLoginViewController.h */,
+				093555A21A3A2DE000D04716 /* AVLoginViewController.m */,
+				093555981A3A24D600D04716 /* AVLoginView.h */,
+				093555991A3A24D600D04716 /* AVLoginView.m */,
+				093555951A3A24B400D04716 /* AVLoginViewModel.h */,
+				093555961A3A24B400D04716 /* AVLoginViewModel.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		093555BC1A3A50DC00D04716 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				093555BD1A3A50E700D04716 /* AVConstants.h */,
+				093555BE1A3A50E700D04716 /* AVConstants.m */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		093555CE1A3B504B00D04716 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				0935555C1A3A0EFE00D04716 /* AVAppDelegate.h */,
+				0935555D1A3A0EFE00D04716 /* AVAppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		093555CF1A3B506300D04716 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				098683CC1A6721AB004A4D60 /* AVLink.h */,
+				098683CD1A6721AB004A4D60 /* AVLink.m */,
+				098683C91A65E097004A4D60 /* AVLinkConnector.h */,
+				098683CA1A65E097004A4D60 /* AVLinkConnector.m */,
+				093555D01A3B506F00D04716 /* AVUser.h */,
+				093555D11A3B506F00D04716 /* AVUser.m */,
+				09E885771A6464F5004F3617 /* AVUserManager.h */,
+				09E885781A6464F5004F3617 /* AVUserManager.m */,
+				0908F3391A6D8C6100E2AF35 /* AVUserManager+AutoLogin.h */,
+				0908F33A1A6D8C6100E2AF35 /* AVUserManager+AutoLogin.m */,
+				0908F33C1A6DD69F00E2AF35 /* AVPushRegistration.h */,
+				0908F33D1A6DD69F00E2AF35 /* AVPushRegistration.m */,
+			);
+			name = Users;
+			sourceTree = "<group>";
+		};
+		093C20A51A1475BE00C62937 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				093C20A31A14759000C62937 /* Foundation.framework */,
+				093C20A11A14753300C62937 /* SystemConfiguration.framework */,
+				093C209D1A14752B00C62937 /* Security.framework */,
+				093C209B1A14752800C62937 /* QuartzCore.framework */,
+				093C20991A14752400C62937 /* MobileCoreServices.framework */,
+				093C20971A14751F00C62937 /* libz.dylib */,
+				093C20951A14751A00C62937 /* CoreLocation.framework */,
+				093C20931A14751600C62937 /* CoreGraphics.framework */,
+				093C20911A14751200C62937 /* CFNetwork.framework */,
+				093C208F1A14750D00C62937 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0945C8E01A45E341004379E2 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				0945C8E31A45E3D2004379E2 /* AVModalContainerViewController.h */,
+				0945C8E41A45E3D2004379E2 /* AVModalContainerViewController.m */,
+				0945C8E11A45E35E004379E2 /* AVModalContainerViewController.xib */,
+				09114FFF1A44B3EC00E81A32 /* AVModalViewController.h */,
+				091150001A44B3EC00E81A32 /* AVModalViewController.m */,
+			);
+			name = Modal;
+			sourceTree = "<group>";
+		};
+		0945C8ED1A48FC0D004379E2 /* Enter Code */ = {
+			isa = PBXGroup;
+			children = (
+				0945C8EE1A48FC41004379E2 /* AVEnterCodeView.h */,
+				0945C8EF1A48FC41004379E2 /* AVEnterCodeView.m */,
+				0945C8E81A48FBEC004379E2 /* AVEnterCodeViewController.h */,
+				0945C8E91A48FBEC004379E2 /* AVEnterCodeViewController.m */,
+				0945C8EA1A48FBEC004379E2 /* AVEnterCodeViewController.xib */,
+				0945C8F11A48FE03004379E2 /* AVEnterCodeViewModel.h */,
+				0945C8F21A48FE03004379E2 /* AVEnterCodeViewModel.m */,
+			);
+			name = "Enter Code";
+			sourceTree = "<group>";
+		};
+		097EC24B1A2E77CC0060D6AF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				093555B11A3A4BCD00D04716 /* Login */,
+				093555B01A3A4BCA00D04716 /* Base */,
+				093555AF1A3A4BC400D04716 /* Registration */,
+				097EC24C1A2E77EC0060D6AF /* Login.storyboard */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		0999DBD81A1CFF0E00AA0C8F /* Coupon Table Edit View */ = {
+			isa = PBXGroup;
+			children = (
+				093555681A3A103600D04716 /* AVCouponEditTableViewCell.h */,
+				093555691A3A103600D04716 /* AVCouponEditTableViewCell.m */,
+				093555651A3A101C00D04716 /* AVCouponEditTableViewController.h */,
+				093555661A3A101C00D04716 /* AVCouponEditTableViewController.m */,
+			);
+			name = "Coupon Table Edit View";
+			sourceTree = "<group>";
+		};
+		0999DBD91A1CFF1800AA0C8F /* Coupon Table View */ = {
+			isa = PBXGroup;
+			children = (
+				0935556B1A3A104F00D04716 /* AVCouponTableViewController.h */,
+				0935556C1A3A104F00D04716 /* AVCouponTableViewController.m */,
+				093555711A3A13AF00D04716 /* AVCouponTableViewCell.h */,
+				093555721A3A13AF00D04716 /* AVCouponTableViewCell.m */,
+			);
+			name = "Coupon Table View";
+			sourceTree = "<group>";
+		};
+		0999DBDC1A1CFFE100AA0C8F /* Coupon Add View */ = {
+			isa = PBXGroup;
+			children = (
+				0918E9521A41E281008A9FC4 /* AVCouponEditViewController.h */,
+				0918E9531A41E281008A9FC4 /* AVCouponEditViewController.m */,
+				09114FC91A42212000E81A32 /* AVCouponEditViewModel.h */,
+				09114FCA1A42212000E81A32 /* AVCouponEditViewModel.m */,
+				09114FCC1A42216400E81A32 /* AVCouponEditView.h */,
+				09114FCD1A42216400E81A32 /* AVCouponEditView.m */,
+			);
+			name = "Coupon Add View";
+			sourceTree = "<group>";
+		};
+		0999DBDF1A1D00B600AA0C8F /* Coupon Table Container View */ = {
+			isa = PBXGroup;
+			children = (
+				093555621A3A0FF400D04716 /* AVCouponTableContainerViewController.h */,
+				093555631A3A0FF400D04716 /* AVCouponTableContainerViewController.m */,
+			);
+			name = "Coupon Table Container View";
+			sourceTree = "<group>";
+		};
+		09A7FE891A3FE1C500255C76 /* Coupon Base Table View */ = {
+			isa = PBXGroup;
+			children = (
+				09A7FE861A3FE14B00255C76 /* AVCouponBaseTableViewController.h */,
+				09A7FE871A3FE14B00255C76 /* AVCouponBaseTableViewController.m */,
+			);
+			name = "Coupon Base Table View";
+			sourceTree = "<group>";
+		};
+		09A7FE9E1A40CB9800255C76 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				09114FD31A43A0E900E81A32 /* Adapters */,
+				0908F31E1A69BA2200E2AF35 /* Base Classes */,
+				09114FD41A43A0F400E81A32 /* Controls */,
+				0945C8E01A45E341004379E2 /* Modal */,
+				09E8857D1A646DE3004F3617 /* Objects */,
+				091EB1981A38F01700335EE6 /* Views */,
+			);
+			name = General;
+			sourceTree = "<group>";
+		};
+		09C419081A144C2400EF62DF = {
+			isa = PBXGroup;
+			children = (
+				09C419131A144C2400EF62DF /* Anniversary */,
+				09C419291A144C2400EF62DF /* AnniversaryTests */,
+				09C419121A144C2400EF62DF /* Products */,
+				592F86CEE03AFBD91888713F /* Pods */,
+				5C1035CDC1BC0C8DEEA6552F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		09C419121A144C2400EF62DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09C419111A144C2400EF62DF /* Anniversary.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09C419131A144C2400EF62DF /* Anniversary */ = {
+			isa = PBXGroup;
+			children = (
+				093555CE1A3B504B00D04716 /* AppDelegate */,
+				090DDFEF1A1494120002BE89 /* Assets */,
+				093555BC1A3A50DC00D04716 /* Constants */,
+				090DDFEE1A1494000002BE89 /* Countdown */,
+				090DDFF11A1494260002BE89 /* Coupons */,
+				0945C8ED1A48FC0D004379E2 /* Enter Code */,
+				093C20A51A1475BE00C62937 /* Frameworks */,
+				09A7FE9E1A40CB9800255C76 /* General */,
+				097EC24B1A2E77CC0060D6AF /* Login */,
+				090DDFF01A1494230002BE89 /* Menu */,
+				09114FF31A44B0EE00E81A32 /* Settings */,
+				09C419141A144C2400EF62DF /* Supporting Files */,
+				091EB1921A38D18C00335EE6 /* Transitions */,
+				093555CF1A3B506300D04716 /* Users */,
+				09D3DD091A2FE0C5001536BC /* Utility */,
+			);
+			path = Anniversary;
+			sourceTree = "<group>";
+		};
+		09C419141A144C2400EF62DF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				09C4191D1A144C2400EF62DF /* Images.xcassets */,
+				09C419151A144C2400EF62DF /* Info.plist */,
+				093555AA1A3A34D200D04716 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		09C419291A144C2400EF62DF /* AnniversaryTests */ = {
+			isa = PBXGroup;
+			children = (
+				09C4192C1A144C2400EF62DF /* AnniversaryTests.swift */,
+				09C4192A1A144C2400EF62DF /* Supporting Files */,
+			);
+			path = AnniversaryTests;
+			sourceTree = "<group>";
+		};
+		09C4192A1A144C2400EF62DF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				09C4192B1A144C2400EF62DF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		09D3DD091A2FE0C5001536BC /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				0987706F1A69784A006948D8 /* AVColorUtility.h */,
+				098770701A69784A006948D8 /* AVColorUtility.m */,
+				091150031A44BE4600E81A32 /* AVModalUtility.h */,
+				091150041A44BE4600E81A32 /* AVModalUtility.m */,
+				0935557D1A3A1E8300D04716 /* AVStringUtility.h */,
+				0935557E1A3A1E8300D04716 /* AVStringUtility.m */,
+				093555801A3A1EC600D04716 /* AVTransitionUtility.h */,
+				093555811A3A1EC600D04716 /* AVTransitionUtility.m */,
+				0935557A1A3A1D0300D04716 /* AVViewControllerUtility.h */,
+				0935557B1A3A1D0300D04716 /* AVViewControllerUtility.m */,
+				0908F3231A6D60DA00E2AF35 /* Network */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		09E8857D1A646DE3004F3617 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				09E8857A1A646DB3004F3617 /* AVToken.h */,
+				09E8857B1A646DB3004F3617 /* AVToken.m */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		592F86CEE03AFBD91888713F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				487F5B45C6814BAC1A8C161A /* Pods.debug.xcconfig */,
+				8A0C3E9FA8484EBD308AE431 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5C1035CDC1BC0C8DEEA6552F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F494067B65F4E114C6268EDF /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		09C419101A144C2400EF62DF /* Anniversary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09C419301A144C2400EF62DF /* Build configuration list for PBXNativeTarget "Anniversary" */;
+			buildPhases = (
+				C1BE30522E13D0346062A812 /* Check Pods Manifest.lock */,
+				09C4190D1A144C2400EF62DF /* Sources */,
+				09C4190E1A144C2400EF62DF /* Frameworks */,
+				09C4190F1A144C2400EF62DF /* Resources */,
+				FDD745DF39AE4207EE47822B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Anniversary;
+			productName = Anniversary;
+			productReference = 09C419111A144C2400EF62DF /* Anniversary.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		09C419091A144C2400EF62DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Alan Bouzek";
+				TargetAttributes = {
+					09C419101A144C2400EF62DF = {
+						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 7FHJRDH8Z6;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 09C4190C1A144C2400EF62DF /* Build configuration list for PBXProject "Anniversary" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 09C419081A144C2400EF62DF;
+			productRefGroup = 09C419121A144C2400EF62DF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				09C419101A144C2400EF62DF /* Anniversary */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09C4190F1A144C2400EF62DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09C4191C1A144C2400EF62DF /* Menu.storyboard in Resources */,
+				09C419211A144C2400EF62DF /* LaunchScreen.xib in Resources */,
+				09C4191E1A144C2400EF62DF /* Images.xcassets in Resources */,
+				091EB19B1A38F03900335EE6 /* AVHeartView.xib in Resources */,
+				09114FD61A43A15900E81A32 /* AVCounterViewController.xib in Resources */,
+				097EC24D1A2E77EC0060D6AF /* Login.storyboard in Resources */,
+				0999DBED1A1D040700AA0C8F /* Coupons.storyboard in Resources */,
+				093555D71A3F5D8700D04716 /* Icons.xcassets in Resources */,
+				0945C8E71A48F3FA004379E2 /* AVCountdownViewController.xib in Resources */,
+				0945C8EC1A48FBEC004379E2 /* AVEnterCodeViewController.xib in Resources */,
+				09114FF51A44B12E00E81A32 /* Settings.storyboard in Resources */,
+				0945C8E21A45E35E004379E2 /* AVModalContainerViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C1BE30522E13D0346062A812 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FDD745DF39AE4207EE47822B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09C4190D1A144C2400EF62DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				093555671A3A101C00D04716 /* AVCouponEditTableViewController.m in Sources */,
+				093555BA1A3A4E1F00D04716 /* AVTextFieldAdapter.m in Sources */,
+				091150011A44B3EC00E81A32 /* AVModalViewController.m in Sources */,
+				0945C8F31A48FE03004379E2 /* AVEnterCodeViewModel.m in Sources */,
+				093555A31A3A2DE000D04716 /* AVLoginViewController.m in Sources */,
+				093555BF1A3A50E700D04716 /* AVConstants.m in Sources */,
+				09114FFB1A44B16800E81A32 /* AVSettingsView.m in Sources */,
+				0945C8F01A48FC41004379E2 /* AVEnterCodeView.m in Sources */,
+				0935559A1A3A24D600D04716 /* AVLoginView.m in Sources */,
+				0935555E1A3A0EFE00D04716 /* AVAppDelegate.m in Sources */,
+				098770711A69784A006948D8 /* AVColorUtility.m in Sources */,
+				0935556D1A3A104F00D04716 /* AVCouponTableViewController.m in Sources */,
+				0935556A1A3A103600D04716 /* AVCouponEditTableViewCell.m in Sources */,
+				093555821A3A1EC600D04716 /* AVTransitionUtility.m in Sources */,
+				093555CA1A3B4DBA00D04716 /* AVCoupon.m in Sources */,
+				098CA1241A65A07C00E0F364 /* AVScrollViewKeyboardAdapter.m in Sources */,
+				0935557F1A3A1E8300D04716 /* AVStringUtility.m in Sources */,
+				09A7FEA11A40CBBC00255C76 /* AVArrayTableViewAdapter.m in Sources */,
+				098683CB1A65E097004A4D60 /* AVLinkConnector.m in Sources */,
+				0908F33E1A6DD69F00E2AF35 /* AVPushRegistration.m in Sources */,
+				09A7FE881A3FE14B00255C76 /* AVCouponBaseTableViewController.m in Sources */,
+				093555971A3A24B400D04716 /* AVLoginViewModel.m in Sources */,
+				093555761A3A158300D04716 /* AVCountdownViewController.m in Sources */,
+				09114FEA1A449D2F00E81A32 /* AVCounterViewController.m in Sources */,
+				0935557C1A3A1D0300D04716 /* AVViewControllerUtility.m in Sources */,
+				093555A61A3A2F5600D04716 /* AVRegistrationViewController.m in Sources */,
+				0918E9541A41E281008A9FC4 /* AVCouponEditViewController.m in Sources */,
+				09114FD91A43A17D00E81A32 /* AVCounterView.m in Sources */,
+				0935559D1A3A275200D04716 /* AVBaseLoginViewController.m in Sources */,
+				0908F3321A6D6B4A00E2AF35 /* AVCouponNetworkUtility.m in Sources */,
+				0908F3211A69BA3500E2AF35 /* AVColoredViewController.m in Sources */,
+				093555AB1A3A34D200D04716 /* main.m in Sources */,
+				093555291A39F61800D04716 /* AVHeartView.m in Sources */,
+				09E885791A6464F5004F3617 /* AVUserManager.m in Sources */,
+				09114FF81A44B14400E81A32 /* AVSettingsViewController.m in Sources */,
+				093555731A3A13AF00D04716 /* AVCouponTableViewCell.m in Sources */,
+				0908F32F1A6D6B2600E2AF35 /* AVUserNetworkUtility.m in Sources */,
+				0945C8E51A45E3D2004379E2 /* AVModalContainerViewController.m in Sources */,
+				0908F3381A6D7A6A00E2AF35 /* AVTokenRefreshHTTPRequestOperationManager.m in Sources */,
+				09E885761A646058004F3617 /* AVBaseNetworkUtility.m in Sources */,
+				098683CE1A6721AB004A4D60 /* AVLink.m in Sources */,
+				093555B71A3A4C4800D04716 /* AVRegistrationView.m in Sources */,
+				093555641A3A0FF400D04716 /* AVCouponTableContainerViewController.m in Sources */,
+				093555D21A3B506F00D04716 /* AVUser.m in Sources */,
+				09114FCB1A42212000E81A32 /* AVCouponEditViewModel.m in Sources */,
+				09E8857C1A646DB3004F3617 /* AVToken.m in Sources */,
+				09114FCE1A42216400E81A32 /* AVCouponEditView.m in Sources */,
+				093555A01A3A2A6A00D04716 /* AVBaseLoginTabController.m in Sources */,
+				0945C8EB1A48FBEC004379E2 /* AVEnterCodeViewController.m in Sources */,
+				091150051A44BE4600E81A32 /* AVModalUtility.m in Sources */,
+				093555A91A3A2FA000D04716 /* AVLoginToMenuTransitionManager.m in Sources */,
+				093555B41A3A4C0700D04716 /* AVRegistrationViewModel.m in Sources */,
+				0908F33B1A6D8C6100E2AF35 /* AVUserManager+AutoLogin.m in Sources */,
+				093555791A3A18FF00D04716 /* AVMenuViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		09C4191A1A144C2400EF62DF /* Menu.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09C4191B1A144C2400EF62DF /* Base */,
+			);
+			name = Menu.storyboard;
+			path = ../Anniversary;
+			sourceTree = "<group>";
+		};
+		09C4191F1A144C2400EF62DF /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09C419201A144C2400EF62DF /* Base */,
+			);
+			name = LaunchScreen.xib;
+			path = ../Anniversary;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		09C4192E1A144C2400EF62DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Alan Bouzek (H3W8RD5LQ7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"${PROJECT_DIR}/Anniversary",
+					"${PROJECT_DIR}",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				PROVISIONING_PROFILE = "c95d6932-ad45-4554-a863-39a132f97a51";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Anniversary/Anniversary-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		09C4192F1A144C2400EF62DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Alan Bouzek (H3W8RD5LQ7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"${PROJECT_DIR}/Anniversary",
+					"${PROJECT_DIR}",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "c95d6932-ad45-4554-a863-39a132f97a51";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Anniversary/Anniversary-Bridging-Header.h";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		09C419311A144C2400EF62DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 487F5B45C6814BAC1A8C161A /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Anniversary",
+					"/Users/abouzek/Downloads/Reveal.app/Contents/SharedSupport/iOS-Libraries",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Anniversary/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"${inherited}",
+					"-ObjC",
+					"-l\"Pods-Mantle\"",
+					"-framework",
+					"\"Foundation\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Anniversary/Anniversary-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		09C419321A144C2400EF62DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A0C3E9FA8484EBD308AE431 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Anniversary",
+					"/Users/abouzek/Downloads/Reveal.app/Contents/SharedSupport/iOS-Libraries",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Anniversary/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-l\"Pods-Mantle\"",
+					"-framework",
+					"\"Foundation\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Anniversary/Anniversary-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09C4190C1A144C2400EF62DF /* Build configuration list for PBXProject "Anniversary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09C4192E1A144C2400EF62DF /* Debug */,
+				09C4192F1A144C2400EF62DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09C419301A144C2400EF62DF /* Build configuration list for PBXNativeTarget "Anniversary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09C419311A144C2400EF62DF /* Debug */,
+				09C419321A144C2400EF62DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 09C419091A144C2400EF62DF /* Project object */;
+}

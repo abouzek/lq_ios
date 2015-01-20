@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AVHeartView">
+            <connections>
+                <outlet property="heartImageView" destination="ghw-Gq-WTe" id="fhK-nu-Gbz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="Heart View">
+            <rect key="frame" x="0.0" y="0.0" width="288" height="289"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart_red" translatesAutoresizingMaskIntoConstraints="NO" id="ghw-Gq-WTe" userLabel="Heart Image View">
+                    <rect key="frame" x="0.0" y="0.0" width="288" height="289"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ghw-Gq-WTe" secondAttribute="trailing" id="Dew-Yf-gKh"/>
+                <constraint firstItem="ghw-Gq-WTe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MTk-g3-Lwn"/>
+                <constraint firstItem="ghw-Gq-WTe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="RIJ-AZ-Hga"/>
+                <constraint firstAttribute="bottom" secondItem="ghw-Gq-WTe" secondAttribute="bottom" id="urm-5O-4aG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="427" y="349.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="heart_red" width="2000" height="2000"/>
+    </resources>
+</document>
