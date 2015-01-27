@@ -1,30 +1,29 @@
 //
-//  AVChoreTableViewCell.h
+//  AVCouponsTableViewCell.h
 //  Anniversary
 //
-//  Created by Alan Bouzek on 12/11/14.
-//  Copyright (c) 2014 Alan Bouzek. All rights reserved.
+//  Created by Alan Bouzek on 1/21/15.
+//  Copyright (c) 2015 Alan Bouzek. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import <MGSwipeTableCell.h>
 #import "AVCoupon.h"
 
 @protocol AVCouponTableViewCellDelegate;
 
 
-@interface AVCouponTableViewCell : UITableViewCell
+@interface AVCouponTableViewCell : MGSwipeTableCell
 
-@property (weak, nonatomic) id<AVCouponTableViewCellDelegate> delegate;
+@property (weak, nonatomic) id<AVCouponTableViewCellDelegate> cellDelegate;
 
 -(void)styleForCoupon:(AVCoupon *)coupon;
--(void)disable;
--(void)enable;
 
 @end
 
 
 @protocol AVCouponTableViewCellDelegate <NSObject>
 
--(void)checkTappedInCell:(AVCouponTableViewCell *)cell;
+-(void)couponTableViewCellDidPerformDecrement:(AVCouponTableViewCell *)cell;
 
 @end

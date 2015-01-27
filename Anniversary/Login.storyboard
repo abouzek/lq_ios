@@ -18,18 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OV9-h2-hDW" userLabel="Heart View" customClass="AVHeartView">
-                                <rect key="frame" x="16" y="30" width="288" height="289"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="OV9-h2-hDW" secondAttribute="height" multiplier="288:289" id="NaG-40-DEJ"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ht4-Ou-4Lr" userLabel="Register Button">
                                 <rect key="frame" x="0.0" y="433" width="160" height="135"/>
-                                <color key="backgroundColor" red="0.94548911236702127" green="0.68512726911724497" blue="0.83486587211170282" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <state key="normal" title="BEGIN">
+                                <color key="backgroundColor" red="0.24313725490196078" green="0.37647058823529411" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                <state key="normal" title="REGISTER">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
@@ -39,9 +32,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7x6-m7-bOk" userLabel="Login Button">
                                 <rect key="frame" x="160" y="433" width="160" height="135"/>
-                                <color key="backgroundColor" red="0.23218454008809286" green="0.84998590816318942" blue="1" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <state key="normal" title="RETURN">
+                                <color key="backgroundColor" red="0.15294117647058825" green="0.32156862745097925" blue="0.46636085626911311" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                <state key="normal" title="LOGIN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
@@ -55,45 +48,40 @@
                                     <segue destination="VNe-TT-8bI" kind="embed" identifier="EmbedTabViewController" id="bHk-nE-pQd"/>
                                 </connections>
                             </containerView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="tWu-TZ-G8e" userLabel="Right Button Activity Indicator">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="nng-uS-RfP">
                                 <rect key="frame" x="222" y="482" width="37" height="37"/>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" red="0.98823529409999999" green="0.53429323259999995" blue="0.74850213649999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.50588235290000005" green="0.60392156860000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="OV9-h2-hDW" secondAttribute="centerX" id="0x3-y7-W2W"/>
                             <constraint firstItem="7x6-m7-bOk" firstAttribute="leading" secondItem="ht4-Ou-4Lr" secondAttribute="trailing" id="6rm-K8-1eV"/>
                             <constraint firstItem="0zA-zB-rHP" firstAttribute="top" secondItem="Xk5-iJ-uWX" secondAttribute="bottom" id="A6d-Fh-jAP"/>
                             <constraint firstItem="ht4-Ou-4Lr" firstAttribute="width" secondItem="7x6-m7-bOk" secondAttribute="height" multiplier="32:27" id="DVg-cX-Ylh"/>
-                            <constraint firstItem="7x6-m7-bOk" firstAttribute="centerX" secondItem="tWu-TZ-G8e" secondAttribute="centerX" id="J2h-bp-K4V"/>
                             <constraint firstAttribute="trailing" secondItem="0zA-zB-rHP" secondAttribute="trailing" id="L1i-be-dEL"/>
                             <constraint firstItem="0zA-zB-rHP" firstAttribute="leading" secondItem="QmX-3X-J8V" secondAttribute="leading" id="PLh-am-wNW"/>
                             <constraint firstAttribute="trailing" secondItem="7x6-m7-bOk" secondAttribute="trailing" id="RrG-r1-1x3"/>
-                            <constraint firstItem="7x6-m7-bOk" firstAttribute="centerY" secondItem="tWu-TZ-G8e" secondAttribute="centerY" id="amX-7B-h5d"/>
+                            <constraint firstItem="7x6-m7-bOk" firstAttribute="centerY" secondItem="nng-uS-RfP" secondAttribute="centerY" id="U3N-jN-P0o"/>
                             <constraint firstItem="ht4-Ou-4Lr" firstAttribute="leading" secondItem="QmX-3X-J8V" secondAttribute="leading" id="c4w-yf-XM5"/>
                             <constraint firstItem="AuB-k3-zQ3" firstAttribute="top" secondItem="7x6-m7-bOk" secondAttribute="bottom" id="eAv-87-KG3"/>
-                            <constraint firstItem="OV9-h2-hDW" firstAttribute="trailing" secondItem="QmX-3X-J8V" secondAttribute="trailingMargin" id="jn3-I1-T6j"/>
                             <constraint firstItem="ht4-Ou-4Lr" firstAttribute="height" secondItem="7x6-m7-bOk" secondAttribute="height" id="ln0-d0-zoD"/>
                             <constraint firstItem="7x6-m7-bOk" firstAttribute="top" secondItem="0zA-zB-rHP" secondAttribute="bottom" constant="10" id="m8A-Kl-Ape"/>
-                            <constraint firstItem="OV9-h2-hDW" firstAttribute="leading" secondItem="QmX-3X-J8V" secondAttribute="leadingMargin" id="pXn-dC-9SA"/>
+                            <constraint firstItem="7x6-m7-bOk" firstAttribute="centerX" secondItem="nng-uS-RfP" secondAttribute="centerX" id="m8X-6B-ALD"/>
                             <constraint firstItem="ht4-Ou-4Lr" firstAttribute="width" secondItem="7x6-m7-bOk" secondAttribute="width" id="w7b-ON-7OR"/>
                             <constraint firstItem="AuB-k3-zQ3" firstAttribute="top" secondItem="ht4-Ou-4Lr" secondAttribute="bottom" id="wbH-oP-uGh"/>
-                            <constraint firstItem="OV9-h2-hDW" firstAttribute="top" secondItem="Xk5-iJ-uWX" secondAttribute="bottom" constant="10" id="yDh-xe-4G2"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="tWu-TZ-G8e" id="UWT-C2-gaw"/>
+                        <outlet property="activityIndicator" destination="nng-uS-RfP" id="zbb-TQ-Odb"/>
                         <outlet property="containerView" destination="0zA-zB-rHP" id="hWY-IO-3wZ"/>
-                        <outlet property="heartView" destination="OV9-h2-hDW" id="QZt-Og-fsZ"/>
                         <outlet property="loginButton" destination="7x6-m7-bOk" id="D41-UO-UXo"/>
                         <outlet property="registerButton" destination="ht4-Ou-4Lr" id="9Jc-I8-1Rg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DtA-eH-IHL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-19" y="426"/>
+            <point key="canvasLocation" x="-38" y="421"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="ENe-b1-wfL">

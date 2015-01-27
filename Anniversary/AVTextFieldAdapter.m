@@ -7,11 +7,12 @@
 //
 
 #import "AVTextFieldAdapter.h"
+#import "AVConstants.h"
 
 // Constants
 int const MAX_TEXT_LENGTH = 15;
-CGFloat const TEXTFIELD_BORDER_WIDTH = 2.0;
-CGFloat const TEXTFIELD_CORNER_RADIUS = 4.0;
+CGFloat const TEXTFIELD_BORDER_WIDTH = 1.0;
+CGFloat const TEXTFIELD_CORNER_RADIUS = 1.0;
 
 @interface AVTextFieldAdapter ()
 
@@ -44,13 +45,15 @@ CGFloat const TEXTFIELD_CORNER_RADIUS = 4.0;
     textField.layer.borderColor = [[UIColor whiteColor] CGColor];
     textField.layer.cornerRadius = TEXTFIELD_CORNER_RADIUS;
     textField.layer.borderWidth = TEXTFIELD_BORDER_WIDTH;
+    textField.font = [UIFont fontWithName:TEXT_FIELD_FONT size:textField.font.pointSize];
     textField.delegate = self;
     
     [self.textFields addObject:textField];
 }
 
 -(void)setPlaceholder:(NSString *)placeholder forTextField:(UITextField *)textField {
-    NSDictionary *attributes = @{NSForegroundColorAttributeName : [[UIColor whiteColor] colorWithAlphaComponent:0.85]};
+    NSDictionary *attributes = @{NSForegroundColorAttributeName : [[UIColor whiteColor] colorWithAlphaComponent:0.85],
+                                 NSFontAttributeName : [UIFont fontWithName:TEXT_FIELD_FONT size:textField.font.pointSize]};
     textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:placeholder attributes:attributes];
 }
 

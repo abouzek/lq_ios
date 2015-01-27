@@ -1,9 +1,9 @@
 //
-//  AVCouponAddView.h
+//  AVCouponsEditView.h
 //  Anniversary
 //
-//  Created by Alan Bouzek on 12/17/14.
-//  Copyright (c) 2014 Alan Bouzek. All rights reserved.
+//  Created by Alan Bouzek on 1/22/15.
+//  Copyright (c) 2015 Alan Bouzek. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -19,18 +19,14 @@
 
 @property (strong, nonatomic) IBOutlet UIView *counterContainerView;
 
-
--(void)setupSize;
-
 @end
 
 
 @protocol AVCouponEditViewDelegate <NSObject>
 
 -(void)couponEditView:(AVCouponEditView *)couponEditView
-    didPressSaveButton:(UIButton *)saveButton;
+   didPressSaveButton:(UIButton *)saveButton;
 -(void)couponEditView:(AVCouponEditView *)couponEditView
-    didPressCancelButton:(UIButton *)cancelButton;
+ didPressCancelButton:(UIButton *)cancelButton;
 
 @end
-

@@ -9,7 +9,7 @@
 #import "AVConstants.h"
 
 // Network constants
-NSString * const SERVER_BASE_URL = @"http://192.168.1.70:5000/api/";
+NSString * const SERVER_BASE_URL = @"http://localhost:5000/api/";
 
 // Transition constants
 CGFloat DEFAULT_TRANSITION_DURATION = 0.35;
@@ -23,9 +23,11 @@ NSString * const LOGIN_CONFIRM_PASSWORD_TEXT_FIELD_PLACEHOLDER = @"Confirm Passw
 NSString * const LOGIN_LINK_CODE_TEXT_FIELD_PLACEHOLDER = @"Link Code";
 
 // Coupon constants
+NSString * const COUPON_NAVIGATION_BAR_TITLE = @"COUPONS";
 NSString * const COUPON_EDIT_NAME_TEXT_FIELD_PLACEHOLDER = @"Name";
-NSString * const COUPON_EDIT_NEW_TITLE_TEXT = @"NEW";
-NSString * const COUPON_EDIT_EDIT_TITLE_TEXT = @"EDIT";
+NSString * const COUPON_EDIT_NEW_TITLE_TEXT = @"NEW COUPON";
+NSString * const COUPON_EDIT_EDIT_TITLE_TEXT = @"EDIT COUPON";
+int COUPON_CELL_HEIGHT = 75;
 int COUPON_MAX_COUNT = 10;
 
 // Enter code constants
@@ -43,3 +45,7 @@ NSString * const COLOR_SCHEME_CHANGED_NOTIFICATION = @"ColorSchemeChangedNotific
 
 // Color scheme constants
 NSString * const COLOR_SCHEME_DEFAULTS_KEY = @"AnniversaryColorScheme";
+
+// Font constants
+NSString * const DEFAULT_FONT = @"AvenirNext-Bold";
+NSString * const TEXT_FIELD_FONT = @"AvenirNext-Regular";

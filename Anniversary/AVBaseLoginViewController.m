@@ -7,11 +7,10 @@
 //
 
 #import "AVBaseLoginViewController.h"
-#import "AVMenuViewController.h"
 #import "AVViewControllerUtility.h"
-#import "AVLoginToMenuTransitionManager.h"
 #import "AVBaseLoginTabController.h"
 #import "AVUserManager+AutoLogin.h"
+#import "AVAppDelegate.h"
 
 // Constants
 NSString * const LOGIN_BUTTON_PRIMARY_TITLE = @"LOGIN";
@@ -23,7 +22,6 @@ NSString * const REGISTER_BUTTON_SECONDARY_TITLE = @"BACK";
 @interface AVBaseLoginViewController ()
 
 @property (nonatomic) BOOL titleShowing;
-@property (strong, nonatomic) AVLoginToMenuTransitionManager *transitionManager;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
@@ -42,7 +40,6 @@ NSString * const REGISTER_BUTTON_SECONDARY_TITLE = @"BACK";
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self.heartView startAnimating];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -104,19 +101,6 @@ NSString * const REGISTER_BUTTON_SECONDARY_TITLE = @"BACK";
     self.registerButton.userInteractionEnabled = YES;
 }
 
--(void)transitionToMenuWithAnimation:(BOOL)animate {
-    AVMenuViewController *menuViewController = (AVMenuViewController*)[AVViewControllerUtility
-                                                                       viewControllerWithIdentifier:@"AVMenuViewController"
-                                                                       fromStoryboardWithName:@"Menu"];
-    if (animate) {
-        self.transitionManager = [AVLoginToMenuTransitionManager new];
-        menuViewController.transitioningDelegate = self.transitionManager;
-    }
-    menuViewController.modalPresentationStyle = UIModalPresentationFullScreen;
-    [self presentViewController:menuViewController animated:animate completion:nil];
-}
-
-
 #pragma mark - IBAction methods
 
 -(void)handleTap {
@@ -151,7 +135,9 @@ NSString * const REGISTER_BUTTON_SECONDARY_TITLE = @"BACK";
         [self.delegate baseLoginViewControllerShouldPerformOperation:self
                                                     withSuccessBlock:^{
                                                         [self hideActivityIndicator];
-                                                        [self transitionToMenuWithAnimation:YES];
+                                                        // Show first view controller after login
+                                                        AVAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+                                                        [appDelegate showMenu];
                                                     } failureBlock:^(NSError *error) {
                                                         [self hideActivityIndicator];
                                                     }

@@ -6,3 +6,5 @@ pod 'Mantle'
 pod "AFNetworking", "~> 2.0"
 pod 'pop', '~> 1.0'
 pod 'FDKeychain', '~> 1.0.0'
+pod 'MGSwipeTableCell'
+pod 'MZFormSheetController'

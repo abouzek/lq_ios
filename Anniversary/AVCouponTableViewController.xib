@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AVCouponTableViewController">
+            <connections>
+                <outlet property="tableView" destination="3fc-Xn-yha" id="phH-5B-Zhb"/>
+                <outlet property="view" destination="iN0-l3-epB" id="sFd-dW-dGP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3fc-Xn-yha">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="separatorColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.50588235294117645" green="0.60392156862745094" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="3fc-Xn-yha" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9pK-Y3-Ju2"/>
+                <constraint firstAttribute="bottom" secondItem="3fc-Xn-yha" secondAttribute="bottom" id="Aqp-PK-TaQ"/>
+                <constraint firstAttribute="trailing" secondItem="3fc-Xn-yha" secondAttribute="trailing" id="BZ1-bX-fxZ"/>
+                <constraint firstItem="3fc-Xn-yha" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="EN9-ib-2Bu"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+</document>

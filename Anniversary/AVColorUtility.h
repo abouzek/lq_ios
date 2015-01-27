@@ -15,13 +15,21 @@ typedef NS_ENUM(NSInteger, ColorScheme) {
 };
 
 typedef NS_ENUM(NSInteger, ColorType) {
+    NavigationControllerBackground,
+    NavigationControllerButton,
     BackgroundPrimary,
     BackgroundSecondary,
     TextPrimary,
+    TextDeselected,
     TextPlaceholder,
     TextFieldBorder,
     ButtonPrimary,
-    ButtonSecondary
+    ButtonPrimaryDeselected,
+    ButtonSecondary,
+    ButtonSecondaryDeselected,
+    CellBackground,
+    CellSubtitle,
+    CellSwipeBackground
 };
 
 @interface AVColorUtility : NSObject

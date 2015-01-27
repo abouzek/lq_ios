@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AVHeartView.h"
 #import "AVConstants.h"
 #import "AVColoredViewController.h"
 
@@ -19,7 +18,6 @@
 
 @property (weak, nonatomic) id<AVBaseLoginViewControllerDelegate> delegate;
 
-@property (strong, nonatomic) IBOutlet AVHeartView *heartView;
 @property (strong, nonatomic) IBOutlet UIView *containerView;
 @property (strong, nonatomic) IBOutlet UIButton *loginButton;
 @property (strong, nonatomic) IBOutlet UIButton *registerButton;

@@ -50,7 +50,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.cellIdentifier
                                                             forIndexPath:indexPath];
     id item = [self itemAtIndexPath:indexPath];
-    self.cellConfigureBlock(cell, item);
+    !self.cellConfigureBlock ?: self.cellConfigureBlock(cell, item);
     return cell;
 }
 
@@ -59,7 +59,10 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     id item = [self itemAtIndexPath:indexPath];
-    self.selectItemBlock(item);
+    !self.selectItemBlock ?: self.selectItemBlock(item);
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 70;
+}
 @end

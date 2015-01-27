@@ -1,15 +1,15 @@
 //
-//  AVCouponAddViewController.m
+//  AVCouponsEditViewController.m
 //  Anniversary
 //
-//  Created by Alan Bouzek on 12/17/14.
-//  Copyright (c) 2014 Alan Bouzek. All rights reserved.
+//  Created by Alan Bouzek on 1/22/15.
+//  Copyright (c) 2015 Alan Bouzek. All rights reserved.
 //
 
 #import "AVCouponEditViewController.h"
+#import "AVCounterViewController.h"
 #import "AVCouponEditView.h"
 #import "AVCouponEditViewModel.h"
-#import "AVCounterViewController.h"
 #import "AVUserManager.h"
 
 @interface AVCouponEditViewController () <AVCouponEditViewDelegate>
@@ -27,7 +27,6 @@
     [super viewDidLoad];
     
     self.couponEditView.delegate = self;
-    [self.couponEditView setupSize];
     
     AVCouponEditViewModel *viewModel = [AVCouponEditViewModel couponEditViewModelFromCoupon:self.coupon];
     self.couponEditView.viewModel = viewModel;
@@ -45,8 +44,8 @@
 
 -(void)embedCounterViewController {
     self.counterViewController = [[AVCounterViewController alloc]
-                                                      initWithNibName:@"AVCounterViewController"
-                                                      bundle:nil];
+                                  initWithNibName:@"AVCounterViewController"
+                                  bundle:nil];
     [self addChildViewController:self.counterViewController];
     self.counterViewController.view.frame = self.couponEditView.counterContainerView.bounds;
     [self.couponEditView.counterContainerView addSubview:self.counterViewController.view];
@@ -73,12 +72,12 @@
                                            count:self.counterViewController.count
                                            owner:owner
                                           sender:sender];
-    [self.modalViewControllerDelegate modalViewControllerShouldDismiss:self
-                                                            withResult:newCoupon];
+    [self.delegate couponEditViewController:self shouldDismissWithResult:newCoupon];
 }
 
 -(void)couponEditView:(AVCouponEditView *)couponEditView didPressCancelButton:(UIButton *)cancelButton {
-    [self.modalViewControllerDelegate modalViewControllerShouldDismiss:self withResult:nil];
+    [self.delegate couponEditViewController:self shouldDismissWithResult:nil];
 }
+
 
 @end

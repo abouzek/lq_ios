@@ -1,9 +1,9 @@
 //
-//  AVChoreEditTableViewCell.h
+//  AVCouponsEditTableViewCell.h
 //  Anniversary
 //
-//  Created by Alan Bouzek on 12/11/14.
-//  Copyright (c) 2014 Alan Bouzek. All rights reserved.
+//  Created by Alan Bouzek on 1/22/15.
+//  Copyright (c) 2015 Alan Bouzek. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

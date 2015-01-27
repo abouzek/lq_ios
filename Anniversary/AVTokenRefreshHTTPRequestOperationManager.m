@@ -89,7 +89,7 @@
         }];
     }
     else {
-        return [self PUT:URLString parameters:parameters success:success failure:failure];
+        return [super PUT:URLString parameters:parameters success:success failure:failure];
     }
     return nil;
 }
@@ -105,7 +105,7 @@
         }];
     }
     else {
-        return [self PATCH:URLString parameters:parameters success:success failure:failure];
+        return [super PATCH:URLString parameters:parameters success:success failure:failure];
     }
     return nil;
 }
@@ -121,7 +121,7 @@
         }];
     }
     else {
-        return [self DELETE:URLString parameters:parameters success:success failure:failure];
+        return [super DELETE:URLString parameters:parameters success:success failure:failure];
     }
     return nil;
 }

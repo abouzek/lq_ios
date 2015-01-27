@@ -10,10 +10,17 @@
 #import "AVUserManager+AutoLogin.h"
 #import "AVViewControllerUtility.h"
 #import "AVUserNetworkUtility.h"
+#import "AVSegmentedContainerViewController.h"
+#import "AVConstants.h"
+#import "AVCouponTableViewController.h"
+#import "AVCouponEditTableViewController.h"
+#import <MZFormSheetController.h>
 
 @implementation AVAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [self setupAppearances];
     
     // Auto login if necessary
     if ([AVUserManager savedManager]) {
@@ -78,6 +85,30 @@
 }
 
 
+#pragma mark - appearance methods
+
+-(void)setupAppearances {
+    [self setupNavigationBarAppearance];
+    [self setupFormSheetAppearance];
+}
+
+-(void)setupNavigationBarAppearance {
+    UIFont *font = [UIFont fontWithName:DEFAULT_FONT size:16];
+    NSDictionary *attributes = @{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:font};
+    [[UINavigationBar appearance] setTitleTextAttributes:attributes];
+    [[UINavigationBar appearance] setTranslucent:NO];
+    [[UINavigationBar appearance] setBarTintColor:[AVColorUtility colorForType:NavigationControllerBackground]];
+}
+
+-(void)setupFormSheetAppearance {
+    [[MZFormSheetBackgroundWindow appearance] setBackgroundBlurEffect:YES];
+    [[MZFormSheetBackgroundWindow appearance] setBlurRadius:5];
+    [[MZFormSheetController appearance] setTransitionStyle:MZFormSheetTransitionStyleBounce];
+    [[MZFormSheetController appearance] setCornerRadius:1];
+    [[MZFormSheetController appearance] setPresentedFormSheetSize:CGSizeMake(280, 335)];
+}
+
+
 #pragma mark - view controller switching methods
 
 -(void)showLogin {
@@ -87,9 +118,15 @@
 }
 
 -(void)showMenu {
-    UIViewController *viewController = [AVViewControllerUtility viewControllerWithIdentifier:@"AVMenuViewController"
-                                                                      fromStoryboardWithName:@"Menu"];
-    [self setWindowFromViewController:viewController];
+    UIViewController *couponTableViewController = [[AVCouponTableViewController alloc]
+                                        initWithNibName:nil
+                                        bundle:nil];
+    UIViewController *couponEditTableViewController = [[AVCouponEditTableViewController alloc]
+                                                       initWithNibName:nil
+                                                       bundle:nil];
+    UIViewController *segmentedViewController = [AVSegmentedContainerViewController segmentedContainerViewControllerWithViewControllers:@[couponTableViewController, couponEditTableViewController]];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:segmentedViewController];
+    [self setWindowFromViewController:navigationController];
 }
 
 @end

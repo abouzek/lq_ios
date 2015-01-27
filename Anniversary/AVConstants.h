@@ -30,9 +30,11 @@ extern NSString * const LOGIN_CONFIRM_PASSWORD_TEXT_FIELD_PLACEHOLDER;
 extern NSString * const LOGIN_LINK_CODE_TEXT_FIELD_PLACEHOLDER;
 
 // Coupon constants
+extern NSString * const COUPON_NAVIGATION_BAR_TITLE;
 extern NSString * const COUPON_EDIT_NAME_TEXT_FIELD_PLACEHOLDER;
 extern NSString * const COUPON_EDIT_NEW_TITLE_TEXT;
 extern NSString * const COUPON_EDIT_EDIT_TITLE_TEXT;
+extern int COUPON_CELL_HEIGHT;
 extern int COUPON_MAX_COUNT;
 
 // Enter code constants
@@ -51,3 +53,7 @@ extern NSString * const COLOR_SCHEME_CHANGED_NOTIFICATION;
 
 // Color scheme constants
 extern NSString * const COLOR_SCHEME_DEFAULTS_KEY;
+
+// Font constants
+extern NSString * const DEFAULT_FONT;
+extern NSString * const TEXT_FIELD_FONT;

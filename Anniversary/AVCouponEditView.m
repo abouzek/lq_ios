@@ -1,14 +1,15 @@
 //
-//  AVCouponAddView.m
+//  AVCouponsEditView.m
 //  Anniversary
 //
-//  Created by Alan Bouzek on 12/17/14.
-//  Copyright (c) 2014 Alan Bouzek. All rights reserved.
+//  Created by Alan Bouzek on 1/22/15.
+//  Copyright (c) 2015 Alan Bouzek. All rights reserved.
 //
 
 #import "AVCouponEditView.h"
-#import "AVTextFieldAdapter.h"
 #import "AVConstants.h"
+#import "AVCouponEditViewModel.h"
+#import "AVTextFieldAdapter.h"
 
 @interface AVCouponEditView ()
 
@@ -26,8 +27,7 @@
 
 -(void)awakeFromNib {
     self.textFieldAdapter = [AVTextFieldAdapter new];
-    [self.textFieldAdapter setupTextField:self.nameTextField
-                          withPlaceholder:COUPON_EDIT_NAME_TEXT_FIELD_PLACEHOLDER];
+    [self.textFieldAdapter setupTextField:self.nameTextField withPlaceholder:COUPON_EDIT_NAME_TEXT_FIELD_PLACEHOLDER];
 }
 
 
@@ -37,20 +37,13 @@
     _viewModel = viewModel;
     self.nameTextField.text = viewModel.name;
     self.titleLabel.text = viewModel.id ? COUPON_EDIT_EDIT_TITLE_TEXT : COUPON_EDIT_NEW_TITLE_TEXT;
+    self.titleLabel.attributedText = [[NSAttributedString alloc]
+                                      initWithString:self.titleLabel.text
+                                      attributes:@{NSKernAttributeName:@3}];
 }
 
 
 #pragma mark - utility methods
-
--(void)setupSize {
-    CGRect screenRect = [UIScreen mainScreen].bounds;
-    CGRect newFrame = self.frame;
-    newFrame.size = CGSizeMake(screenRect.size.width * 0.75, screenRect.size.height * 0.65);
-    self.frame = newFrame;
-    self.center = CGPointMake(CGRectGetMidX(screenRect), CGRectGetMidY(screenRect));
-    self.layer.cornerRadius = 10;
-    self.layer.masksToBounds = YES;
-}
 
 -(BOOL)fieldsAreValid {
     return self.nameTextField.text.length > 0;
@@ -75,5 +68,7 @@
 - (IBAction)cancelButtonPressed:(UIButton *)sender {
     [self.delegate couponEditView:self didPressCancelButton:sender];
 }
+
+
 
 @end

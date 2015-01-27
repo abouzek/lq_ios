@@ -33,9 +33,4 @@ typedef NS_ENUM(NSInteger, SlideDirection) {
                  withDirection:(SlideDirection)direction
            withCompletionBlock:(AVCompletionBlock)completion;
 
-+(void)popModalTransitionView:(UIView *)viewToPresent
-     withCompletionBlock:(AVCompletionBlock)completionBlock;
-+(void)shrinkModalTransitionView:(UIView *)viewToHide
-        withCompletionBlock:(AVCompletionBlock)completionBlock;
-
 @end

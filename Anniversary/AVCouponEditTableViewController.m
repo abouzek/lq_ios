@@ -1,71 +1,84 @@
 //
-//  AVChoreEditTableViewController.m
+//  AVCouponsEditViewController.m
 //  Anniversary
 //
-//  Created by Alan Bouzek on 12/11/14.
-//  Copyright (c) 2014 Alan Bouzek. All rights reserved.
+//  Created by Alan Bouzek on 1/22/15.
+//  Copyright (c) 2015 Alan Bouzek. All rights reserved.
 //
 
 #import "AVCouponEditTableViewController.h"
 #import "AVArrayTableViewAdapter.h"
-#import "AVViewControllerUtility.h"
-#import "AVTransitionUtility.h"
-#import "AVCouponEditViewController.h"
-#import "AVMenuViewController.h"
 #import "AVCouponEditTableViewCell.h"
-#import "AVModalUtility.h"
-#import "AVCouponNetworkUtility.h"
+#import "AVConstants.h"
+#import <MZFormSheetController.h>
+#import "AVCouponEditViewController.h"
+#import "AVColorUtility.h"
 #import "AVUserManager.h"
+#import "AVCouponNetworkUtility.h"
 
-@interface AVCouponEditTableViewController () <AVModalViewControllerDelegate>
+@interface AVCouponEditTableViewController () <AVCouponEditViewControllerDelegate>
 
-@property (strong, nonatomic) AVCouponEditViewController *couponEditViewController;
-
-@property (strong, nonatomic) AVArrayTableViewAdapter *tableViewAdapter;
 @property (strong, nonatomic) NSMutableArray *sentCoupons;
+@property (strong, nonatomic) AVArrayTableViewAdapter *tableViewAdapter;
+@property (strong, nonatomic) MZFormSheetController *formSheetController;
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
+
 @implementation AVCouponEditTableViewController
-
-#pragma mark - lazy loaders
-
--(AVCouponEditViewController *)couponEditViewController {
-    if (!_couponEditViewController) {
-        _couponEditViewController = (AVCouponEditViewController *)[AVViewControllerUtility viewControllerWithIdentifier:@"AVCouponEditViewController"
-                                                             fromStoryboardWithName:@"Coupons"];
-        _couponEditViewController.modalViewControllerDelegate = self;
-    }
-    return _couponEditViewController;
-}
-
-
-#pragma mark - view lifecycle methods
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.sentCoupons = [NSMutableArray new];
+    
+    NSString *cellClassName = NSStringFromClass([AVCouponEditTableViewCell class]);
+    [self.tableView registerNib:[UINib nibWithNibName:cellClassName bundle:nil] forCellReuseIdentifier:cellClassName];
     self.tableViewAdapter = [[AVArrayTableViewAdapter alloc] initWithItems:self.sentCoupons
-                                                            cellIdentifier:@"AVCouponEditTableViewCell"
+                                                            cellIdentifier:cellClassName
                                                         cellConfigureBlock:^(AVCouponEditTableViewCell *cell, AVCoupon *item) {
+                                                            
                                                             [cell styleForCoupon:item];
+                                                            
                                                         } selectItemBlock:^(AVCoupon *item) {
-                                                            [self showCouponEditModalViewForCoupon:item];
-                                                        }];
-    self.tableView.dataSource = self.tableViewAdapter;
+                                                            
+                                                            [self showEditViewControllerForCoupon:item];
+                                                            
+                                                        }
+                             ];
     self.tableView.delegate = self.tableViewAdapter;
-    
-    [self refresh];
-    
-    // Do not show empty cells in table
+    self.tableView.dataSource = self.tableViewAdapter;
     self.tableView.tableFooterView = [UIView new];
+    self.tableView.rowHeight = COUPON_CELL_HEIGHT;
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self setupAddButton];
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self refresh];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark - setup methods
+
+-(void)setupAddButton {
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc]
+                                  initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                  target:self
+                                  action:@selector(showEditViewControllerForNewCoupon)];
+    addButton.tintColor = [AVColorUtility colorForType:NavigationControllerButton];
+    [self.parentViewController.navigationItem setRightBarButtonItem:addButton];
 }
 
 
@@ -76,45 +89,45 @@
     
     NSInteger userId = [AVUserManager manager].currentUser.id;
     [AVCouponNetworkUtility fetchSentCouponsForUserId:userId
-                                   successBlock:^(NSArray *sentCoupons) {
-                                       
-                                       [self.sentCoupons addObjectsFromArray:sentCoupons];
-                                       [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
-
-                                   }
-                                   failureBlock:^(NSError *error) {
-                                       
-                                   }
+                                         successBlock:^(NSArray *sentCoupons) {
+                                             
+                                             [self.sentCoupons addObjectsFromArray:sentCoupons];
+                                             [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
+                                             
+                                         }
+                                         failureBlock:^(NSError *error) {
+                                             
+                                         }
      ];
 }
 
 -(void)createCoupon:(AVCoupon *)coupon {
     [AVCouponNetworkUtility createCoupon:coupon
-                      successBlock:^(AVCoupon *newCoupon) {
-                          
-                          [self.sentCoupons addObject:newCoupon];
-                          [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0]
-                                        withRowAnimation:UITableViewRowAnimationAutomatic];
-
-                      }
-                      failureBlock:^(NSError *error) {
-                          
-                      }
+                            successBlock:^(AVCoupon *newCoupon) {
+                                
+                                [self.sentCoupons addObject:newCoupon];
+                                [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0]
+                                              withRowAnimation:UITableViewRowAnimationAutomatic];
+                                
+                            }
+                            failureBlock:^(NSError *error) {
+                                
+                            }
      ];
 }
 
 -(void)updateCoupon:(AVCoupon *)coupon {
     [AVCouponNetworkUtility updateCoupon:coupon
-                      successBlock:^{
-                          
-                          [self couponUpdated:coupon];
-                          [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0]
-                                        withRowAnimation:UITableViewRowAnimationAutomatic];
-                          
-                      }
-                      failureBlock:^(NSError *error) {
-                          
-                      }
+                            successBlock:^{
+                                
+                                [self couponUpdated:coupon];
+                                [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0]
+                                              withRowAnimation:UITableViewRowAnimationAutomatic];
+                                
+                            }
+                            failureBlock:^(NSError *error) {
+                                
+                            }
      ];
 }
 
@@ -129,46 +142,43 @@
 }
 
 
-#pragma mark - AVCouponAddViewController presentation methods
+#pragma mark - transition methods
 
--(void)showCouponEditModalViewForCoupon:(AVCoupon *)coupon {
-    self.couponEditViewController.coupon = coupon;
+-(void)showEditViewControllerForNewCoupon {
+    [self showEditViewControllerForCoupon:nil];
+}
+
+-(void)showEditViewControllerForCoupon:(AVCoupon *)coupon {
+    AVCouponEditViewController *viewController = [[AVCouponEditViewController alloc] initWithNibName:nil
+                                                                                          bundle:nil];
+    viewController.coupon = coupon;
+    viewController.delegate = self;
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [[AVModalUtility sharedInstance] presentModalViewController:self.couponEditViewController
-                                                   onViewController:self.parentViewController.parentViewController];
-    });
-}
-
--(void)hideCouponEditModalView {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [[AVModalUtility sharedInstance] dismissModalViewWithCompletionBlock:nil];
-    });
+    self.formSheetController = [[MZFormSheetController alloc] initWithViewController:viewController];
+    [self.formSheetController presentAnimated:YES completionHandler:nil];
 }
 
 
-#pragma mark - AVModalViewControllerDelegate methods
+#pragma mark - AVCouponsEditViewControllerDelegate methods
 
--(void)modalViewControllerShouldDismiss:(AVModalViewController *)modalViewController
-                             withResult:(AVCoupon *)coupon {
-    [self hideCouponEditModalView];
-    if (coupon) {
-        if (coupon.id) {
-            // Existing coupon, update it
-            [self updateCoupon:coupon];
+-(void)couponEditViewController:(AVCouponEditViewController *)editViewController
+        shouldDismissWithResult:(AVCoupon *)result {
+    if (result) {
+        if (result.id) {
+            [self updateCoupon:result];
         }
         else {
-            // New coupon
-            [self createCoupon:coupon];
+            [self createCoupon:result];
         }
     }
+    [self.formSheetController dismissAnimated:YES completionHandler:nil];
 }
 
 
-#pragma mark - IBAction methods
+#pragma mark - AVSegmentedInternalViewController methods
 
-- (IBAction)addButtonPressed:(UIButton *)sender {
-    [self showCouponEditModalViewForCoupon:nil];
+-(NSString *)titleForSegment {
+    return @"THEIRS";
 }
 
 @end
