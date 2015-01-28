@@ -13,6 +13,7 @@
 #import "AVLinkConnector.h"
 #import "AVUserManager.h"
 #import "AVLink.h"
+#import "AVLinkNetworkUtility.h"
 
 @interface AVEnterCodeViewController () <AVEnterCodeViewDelegate>
 
@@ -46,31 +47,21 @@
     NSInteger userId = [AVUserManager manager].currentUser.id;
     AVLinkConnector *linkConnector = [AVLinkConnector linkConnectorWithUserId:userId
                                  linkCode:self.enterCodeView.viewModel.linkCode];
-    NSDictionary *parametersToSend = [MTLJSONAdapter JSONDictionaryFromModel:linkConnector];
     
-    NSString *requestURL = [AVBaseNetworkUtility requestURLStringForRequestEntity:CreateLink];
-    AFHTTPRequestOperationManager *manager = [AVBaseNetworkUtility managerForLoggedInUser];
-    
-    [manager POST:requestURL
-       parameters:parametersToSend
-          success:^(AFHTTPRequestOperation *operation, id responseObject) {
-              
-              AVLink *link = [MTLJSONAdapter modelOfClass:[AVLink class]
-                                       fromJSONDictionary:responseObject
-                                                    error:nil];
-              [AVUserManager manager].linkedUserId = link.secondUser.id;
-              
-              [self.enterCodeView animateForSuccessWithCompletionBlock:^{
-                  [self.delegate enterCodeViewControllerDidCompleteLinking:self];
-              }];
-              
-          }
-          failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-              
-              NSLog(@"%@", error.description);
-              [self.enterCodeView animateForFailureWithCompletionBlock:nil];
-              
-          }
+    [AVLinkNetworkUtility createLinkFromLinkConnector:linkConnector
+                        successBlock:^(AVLink *link) {
+        
+                            [AVUserManager manager].link = link;
+                            
+                            [self.enterCodeView animateForSuccessWithCompletionBlock:^{
+                                [self.delegate enterCodeViewControllerDidCompleteLinking:self];
+                            }];
+        
+                        } failureBlock:^(NSError *error) {
+        
+                            [self.enterCodeView animateForFailureWithCompletionBlock:nil];
+        
+                        }
      ];
 }
 

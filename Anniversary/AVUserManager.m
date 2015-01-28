@@ -64,6 +64,18 @@
     return NO;
 }
 
+-(NSInteger)linkedUserId {
+    if (self.link) {
+        if (self.link.firstUser.id != self.currentUser.id) {
+            return self.link.firstUser.id;
+        }
+        else {
+            return self.link.secondUser.id;
+        }
+    }
+    return 0;
+}
+
 
 #pragma mark - getter and setter methods
 
@@ -81,8 +93,7 @@
 #pragma mark - MTLJSONSerializing methods
 
 +(NSDictionary *)JSONKeyPathsByPropertyKey {
-    return @{@"linkedUserId":@"linkedUserId",
-             @"apiToken":@"apiToken",
+    return @{@"apiToken":@"apiToken",
              @"currentUser":@"currentUser",
              @"apiTokenExpirationDate":@"apiTokenExpirationDate"};
 }

@@ -11,6 +11,7 @@
 #import "AVToken.h"
 #import "AVUserManager.h"
 #import "AVUserManager+AutoLogin.h"
+#import "AVLink.h"
 
 @implementation AVUserNetworkUtility
 
@@ -22,7 +23,6 @@
             withSuccessBlock:^(AVToken *tokenWrapper) {
                 
                 [[AVUserManager manager] populateAPITokenFromToken:tokenWrapper];
-                [AVUserManager manager].linkedUserId = tokenWrapper.linkedUserId;
                 
                 // Now fetch current user information and set it on the AVUserManager singleton
                 [self fetchUserWithId:tokenWrapper.currentUserId
@@ -31,7 +31,11 @@
                              [AVUserManager manager].currentUser = user;
                              [AVUserManager saveManager];
                              
-                             !successBlock ?: successBlock();
+                             [self refreshLinkForLoggedInUserWithSuccessBlock:^{
+                                 
+                                 !successBlock ?: successBlock();
+                                 
+                             }];
                              
                          }
                          failureBlock:^(NSError *error) {
@@ -53,7 +57,7 @@
 +(void)registerUser:(AVUser *)user
        successBlock:(AVCompletionBlock)successBlock
        failureBlock:(AVErrorBlock)failureBlock {
-    AFHTTPRequestOperationManager *manager = [AVBaseNetworkUtility baseManager];
+    AFHTTPRequestOperationManager *manager = [self baseManager];
     NSDictionary *parametersToSend = [MTLJSONAdapter JSONDictionaryFromModel:user];
     NSString *requestUrl = [AVBaseNetworkUtility requestURLStringForRequestEntity:CreateUser];
     
@@ -94,6 +98,16 @@
                   
               }
                   failureBlock:nil];
+}
+
++(void)refreshLinkForLoggedInUserWithSuccessBlock:(AVCompletionBlock)successBlock {
+    [self fetchLinkForUserWithId:[AVUserManager manager].currentUser.id
+                    successBlock:^(AVLink *link) {
+                        
+                        [AVUserManager manager].link = link;
+                        !successBlock ?: successBlock();
+                        
+                    } failureBlock:nil];
 }
 
 +(void)registerPush:(AVPushRegistration *)pushRegistration
@@ -150,7 +164,7 @@
 +(void)fetchUserWithId:(NSInteger)userId
           successBlock:(AVResultBlock)successBlock
           failureBlock:(AVErrorBlock)failureBlock {
-    AFHTTPRequestOperationManager *manager = [AVBaseNetworkUtility managerForLoggedInUser];
+    AFHTTPRequestOperationManager *manager = [self managerForLoggedInUser];
     NSString *requestString = [AVBaseNetworkUtility requestURLStringForParameterRequestEntity:GetUser
                                                                                withParameters:@[@(userId)]];
     [manager GET:requestString
@@ -161,6 +175,30 @@
                                       fromJSONDictionary:responseObject
                                                    error:nil];
              !successBlock ?: successBlock(user);
+             
+         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+             
+             NSLog(@"%@", error.description);
+             !failureBlock ?: failureBlock(error);
+             
+         }
+     ];
+}
+
++(void)fetchLinkForUserWithId:(NSInteger)userId
+                 successBlock:(AVResultBlock)successBlock
+                 failureBlock:(AVErrorBlock)failureBlock {
+    AFHTTPRequestOperationManager *manager = [self managerForLoggedInUser];
+    NSString *requestString = [AVBaseNetworkUtility requestURLStringForParameterRequestEntity:GetLinkForUser
+                                                                               withParameters:@[@(userId)]];
+    [manager GET:requestString
+      parameters:nil
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+             
+             AVLink *link = [MTLJSONAdapter modelOfClass:[AVLink class]
+                                      fromJSONDictionary:responseObject
+                                                   error:nil];
+             !successBlock ?: successBlock(link);
              
          } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
              

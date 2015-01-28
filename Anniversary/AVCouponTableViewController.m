@@ -14,6 +14,7 @@
 #import "AVCouponNetworkUtility.h"
 #import "AVEnterCodeViewController.h"
 #import <MZFormSheetController.h>
+#import "AVUserNetworkUtility.h"
 
 @interface AVCouponTableViewController () <AVCouponTableViewCellDelegate, AVEnterCodeViewControllerDelegate>
 
@@ -53,9 +54,11 @@
     [super viewWillAppear:animated];
     [self.parentViewController.navigationItem setRightBarButtonItem:nil];
     
-    if (![AVUserManager manager].linkedUserId) {
-        [self showLinkCodeEntry];
-    }
+    [AVUserNetworkUtility refreshLinkForLoggedInUserWithSuccessBlock:^{
+        if (![[AVUserManager manager] linkedUserId]) {
+            [self showLinkCodeEntry];
+        }
+    }];
 }
 
 -(void)viewDidAppear:(BOOL)animated {

@@ -14,6 +14,5 @@
 @property (strong, nonatomic) NSString *token;
 @property (nonatomic) NSInteger tokenExpirationSeconds;
 @property (nonatomic) NSInteger currentUserId;
-@property (nonatomic) NSInteger linkedUserId;
 
 @end

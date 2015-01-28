@@ -13,7 +13,7 @@
 +(void)fetchCouponsForUserId:(NSInteger)userId
                 successBlock:(AVResultBlock)successBlock
                 failureBlock:(AVErrorBlock)failureBlock {
-    AFHTTPRequestOperationManager *manager = [AVBaseNetworkUtility managerForLoggedInUser];
+    AFHTTPRequestOperationManager *manager = [self managerForLoggedInUser];
     NSString *requestURL = [AVBaseNetworkUtility requestURLStringForParameterRequestEntity:GetCouponsForUser
                                                                         withParameters:@[@(userId)]];
     [manager GET:requestURL
@@ -38,7 +38,7 @@
 +(void)fetchSentCouponsForUserId:(NSInteger)userId
                     successBlock:(AVResultBlock)successBlock
                     failureBlock:(AVErrorBlock)failureBlock {
-    AFHTTPRequestOperationManager *manager = [AVBaseNetworkUtility managerForLoggedInUser];
+    AFHTTPRequestOperationManager *manager = [self managerForLoggedInUser];
     NSString *requestURL = [AVBaseNetworkUtility requestURLStringForParameterRequestEntity:GetSentCouponsForUser
                                                                         withParameters:@[@(userId)]];
     [manager GET:requestURL
@@ -62,7 +62,7 @@
 +(void)createCoupon:(AVCoupon *)coupon
        successBlock:(AVResultBlock)successBlock
        failureBlock:(AVErrorBlock)failureBlock {
-    AFHTTPRequestOperationManager *manager = [AVBaseNetworkUtility managerForLoggedInUser];
+    AFHTTPRequestOperationManager *manager = [self managerForLoggedInUser];
     NSDictionary *parametersToSend = [MTLJSONAdapter JSONDictionaryFromModel:coupon];
     NSString *requestURL = [AVBaseNetworkUtility requestURLStringForRequestEntity:CreateCoupon];
     
@@ -88,7 +88,7 @@
 +(void)updateCoupon:(AVCoupon *)coupon
        successBlock:(AVCompletionBlock)successBlock
        failureBlock:(AVErrorBlock)failureBlock {
-    AFHTTPRequestOperationManager *manager = [AVBaseNetworkUtility managerForLoggedInUser];
+    AFHTTPRequestOperationManager *manager = [self managerForLoggedInUser];
     NSDictionary *parametersToSend = [MTLJSONAdapter JSONDictionaryFromModel:coupon];
     NSString *requestURL = [AVBaseNetworkUtility requestURLStringForParameterRequestEntity:UpdateCoupon
                                                                         withParameters:@[@(coupon.id)]];

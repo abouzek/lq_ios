@@ -12,8 +12,7 @@
 
 +(NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{@"token":@"token",
-             @"currentUserId":@"id",
-             @"linkedUserId":@"linked_user_id",
+             @"currentUserId":@"user_id",
              @"tokenExpirationSeconds":@"token_expiration_seconds"};
 }
 

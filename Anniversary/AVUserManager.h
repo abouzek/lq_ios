@@ -11,6 +11,7 @@
 #import <Mantle.h>
 #import "AVColorUtility.h"
 #import "AVToken.h"
+#import "AVLink.h"
 
 @interface AVUserManager : MTLModel <MTLJSONSerializing>
 
@@ -18,10 +19,11 @@
 -(void)populateFromDictionary:(NSDictionary *)dictionary;
 -(void)populateAPITokenFromToken:(AVToken *)token;
 -(BOOL)tokenNeedsRefreshing;
+-(NSInteger)linkedUserId;
 
 @property (strong, nonatomic) AVUser *currentUser;
 @property (strong, readonly, nonatomic) NSString *apiToken;
-@property (nonatomic) NSInteger linkedUserId;
+@property (strong, nonatomic) AVLink *link;
 @property (nonatomic) ColorScheme colorScheme;
 
 @end

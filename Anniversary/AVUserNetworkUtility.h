@@ -18,6 +18,7 @@
        successBlock:(AVCompletionBlock)successBlock
        failureBlock:(AVErrorBlock)failureBlock;
 +(void)refreshAPITokenForLoggedInUserWithSuccessBlock:(AVCompletionBlock)successBlock;
++(void)refreshLinkForLoggedInUserWithSuccessBlock:(AVCompletionBlock)successBlock;
 +(void)registerPush:(AVPushRegistration *)pushRegistration
        successBlock:(AVCompletionBlock)successBlock
        failureBlock:(AVErrorBlock)failureBlock;

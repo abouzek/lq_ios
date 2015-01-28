@@ -73,6 +73,7 @@
 		09A7FEA11A40CBBC00255C76 /* AVArrayTableViewAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A7FEA01A40CBBC00255C76 /* AVArrayTableViewAdapter.m */; };
 		09C4191E1A144C2400EF62DF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09C4191D1A144C2400EF62DF /* Images.xcassets */; };
 		09C419211A144C2400EF62DF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09C4191F1A144C2400EF62DF /* LaunchScreen.xib */; };
+		09C6E6621A794385001B2F8D /* AVLinkNetworkUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C6E6611A794385001B2F8D /* AVLinkNetworkUtility.m */; };
 		09DC2DC81A72B76C004BB904 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09DC2DC71A72B76C004BB904 /* Login.storyboard */; };
 		09E885761A646058004F3617 /* AVBaseNetworkUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E885751A646058004F3617 /* AVBaseNetworkUtility.m */; };
 		09E885791A6464F5004F3617 /* AVUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E885781A6464F5004F3617 /* AVUserManager.m */; };
@@ -194,6 +195,8 @@
 		09C419201A144C2400EF62DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		09C4192B1A144C2400EF62DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09C4192C1A144C2400EF62DF /* AnniversaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnniversaryTests.swift; sourceTree = "<group>"; };
+		09C6E6601A794385001B2F8D /* AVLinkNetworkUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVLinkNetworkUtility.h; sourceTree = "<group>"; };
+		09C6E6611A794385001B2F8D /* AVLinkNetworkUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVLinkNetworkUtility.m; sourceTree = "<group>"; };
 		09DC2DC71A72B76C004BB904 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		09E885741A646058004F3617 /* AVBaseNetworkUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVBaseNetworkUtility.h; sourceTree = "<group>"; };
 		09E885751A646058004F3617 /* AVBaseNetworkUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVBaseNetworkUtility.m; sourceTree = "<group>"; };
@@ -248,6 +251,8 @@
 				0908F3371A6D7A6A00E2AF35 /* AVTokenRefreshHTTPRequestOperationManager.m */,
 				0908F32D1A6D6B2600E2AF35 /* AVUserNetworkUtility.h */,
 				0908F32E1A6D6B2600E2AF35 /* AVUserNetworkUtility.m */,
+				09C6E6601A794385001B2F8D /* AVLinkNetworkUtility.h */,
+				09C6E6611A794385001B2F8D /* AVLinkNetworkUtility.m */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -731,6 +736,7 @@
 				093555BA1A3A4E1F00D04716 /* AVTextFieldAdapter.m in Sources */,
 				0945C8F31A48FE03004379E2 /* AVEnterCodeViewModel.m in Sources */,
 				093555A31A3A2DE000D04716 /* AVLoginViewController.m in Sources */,
+				09C6E6621A794385001B2F8D /* AVLinkNetworkUtility.m in Sources */,
 				093555BF1A3A50E700D04716 /* AVConstants.m in Sources */,
 				0945C8F01A48FC41004379E2 /* AVEnterCodeView.m in Sources */,
 				0935559A1A3A24D600D04716 /* AVLoginView.m in Sources */,

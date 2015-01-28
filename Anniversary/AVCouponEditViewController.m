@@ -60,7 +60,7 @@
 
 -(void)couponEditView:(AVCouponEditView *)couponEditView didPressSaveButton:(UIButton *)saveButton {
     // Form the coupon from the data and call the delegate
-    NSInteger ownerUserId = [AVUserManager manager].linkedUserId;
+    NSInteger ownerUserId = [[AVUserManager manager] linkedUserId];
     if (!ownerUserId) {
         ownerUserId = [AVUserManager manager].currentUser.id;
     }
